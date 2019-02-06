@@ -11,7 +11,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
     }// doGet
 
     @Override
@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("/profile");
             } else {
                 request.setAttribute("invalidLogin", "Invalid username or password");
-                request.getRequestDispatcher("/login.jsp").forward(request, response);
+                request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
             }
         }
     }// doPost

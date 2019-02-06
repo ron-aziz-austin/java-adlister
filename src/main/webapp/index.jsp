@@ -3,13 +3,13 @@
 <html>
 <head>
     <title>Adlister</title>
-    <jsp:include page="partials/head.jsp" />
+    <jsp:include page="WEB-INF/partials/head.jsp" />
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
+    <jsp:include page="WEB-INF/partials/navbar.jsp" />
 
     <h1>Welcome to the Adlister!</h1>
 
-    <jsp:include page="partials/footer.jsp" />
+    <jsp:include page="WEB-INF/partials/footer.jsp" />
 </body>
 </html>
