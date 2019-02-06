@@ -3,23 +3,30 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.commons.lang3.StringUtils;
 import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
-    }
+        request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
+    }// doGet
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        boolean validAttempt = username.equals("admin") && password.equals("password");
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String uname = request.getParameter("uname");
+        String psw = request.getParameter("psw");
 
-        if (validAttempt) {
-            response.sendRedirect("/profile");
-        } else {
-            response.sendRedirect("/login");
+        if (StringUtils.isNotBlank(uname) || StringUtils.isNotBlank(psw)) {
+            if (uname.equals("admin") && psw.equals("password")) {
+                response.sendRedirect("/profile");
+            } else {
+                request.setAttribute("invalidLogin", "Invalid username or password");
+                request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
+            }
         }
-    }
-}
+    }// doPost
+
+}// class

@@ -1,0 +1,18 @@
+.cards {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+}
+.card {
+    box-shadow: 0px 1px 5px #555;
+    background-color: white;
+}
+.card-header {
+    font-size: 1rem;
+    padding: .5rem;
+}
+.card-main {
+    padding: .5rem;
+    line-height: 1.6em;
+}

@@ -8,8 +8,19 @@ import java.util.List;
 
 @WebServlet(name = "AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
-        request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
-    }
-}
+
+        // Use the factory to get the dao object
+        Ads adsDao = DaoFactory.getAdsDao();
+
+        // Use a method on the dao to get all the products
+        List<Ad> ads = adsDao.all();
+
+        // Pass the data to the jsp
+        request.setAttribute("ads", ads);
+        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
+    }// doGet
+
+}// class

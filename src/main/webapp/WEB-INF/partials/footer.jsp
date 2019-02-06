@@ -1,0 +1,1 @@
+<footer>&copy; Adlister Inc. 2019</footer>
