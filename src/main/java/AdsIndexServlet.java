@@ -11,13 +11,10 @@ public class AdsIndexServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         // Use the factory to get the dao object
         Ads adsDao = DaoFactory.getAdsDao();
-
         // Use a method on the dao to get all the products
         List<Ad> ads = adsDao.all();
-
         // Pass the data to the jsp
         request.setAttribute("ads", ads);
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);

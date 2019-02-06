@@ -8,7 +8,7 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
-    <h1>Welcome ${loggedIn}, you are viewing your profile page.</h1>
+    <h1>This is the secret admin page.</h1>
 
     <jsp:include page="partials/footer.jsp" />
 </body>
