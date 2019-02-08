@@ -2,7 +2,6 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
+
     private Connection connection = null;
 
     public MySQLAdsDao(Config config) {
@@ -41,8 +41,14 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            Statement stmt = connection.createStatement();
-            stmt.executeUpdate(createInsertQuery(ad), Statement.RETURN_GENERATED_KEYS);
+            // the query is passed to the prepareStatement method
+            PreparedStatement stmt = connection.prepareStatement(insertSQLQuery, Statement.RETURN_GENERATED_KEYS);
+            // safely insert the user inputs into the query
+            stmt.setLong(1, ad.getUserId());
+            stmt.setString(2, ad.getTitle());
+            stmt.setString(3, ad.getDescription());
+            // Runs the given SQL statement, which can be an INSERT, UPDATE, or DELETE statement
+            stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
             return rs.getLong(1);
@@ -51,12 +57,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    private String createInsertQuery(Ad ad) {
-        return "INSERT INTO ads(user_id, title, description) VALUES "
-            + "(" + ad.getUserId() + ", "
-            + "'" + ad.getTitle() +"', "
-            + "'" + ad.getDescription() + "')";
-    }
+    // defined query with a placeholder, a ? to indicate wherer the value will go
+    private String insertSQLQuery = "INSERT INTO ads(user_id, title, description) VALUES(?,?,?)";
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
