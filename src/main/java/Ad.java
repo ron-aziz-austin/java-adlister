@@ -1,9 +1,11 @@
 public class Ad {
+    // This represents the columns in the ads table
     private long id;
     private long userId;
     private String title;
     private String description;
 
+    // constructs an object that represents a row in the ads table
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
@@ -11,6 +13,7 @@ public class Ad {
         this.description = description;
     }
 
+    // method overloading
     public Ad(long userId, String title, String description) {
         this.userId = userId;
         this.title = title;
