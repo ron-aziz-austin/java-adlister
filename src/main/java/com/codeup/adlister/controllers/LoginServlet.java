@@ -9,13 +9,14 @@ import java.io.IOException;
 
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
         }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-    }
+    }// doGet
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
@@ -33,5 +34,6 @@ public class LoginServlet extends HttpServlet {
         } else {
             response.sendRedirect("/login");
         }
-    }
-}
+    }// doPost
+
+}// class
