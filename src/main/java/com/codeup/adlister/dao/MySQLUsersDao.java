@@ -70,6 +70,22 @@ public class MySQLUsersDao implements Users {
         }
     }// findByUsername
 
+    @Override  // find a user in the users table by the email
+    public User findByEmail(String email) {
+        try {
+            // preparedStatement object that represents an individual SQL statement
+            PreparedStatement stmt = connection.prepareStatement(
+                    "SELECT * FROM users WHERE email = ? LIMIT 1"
+            );
+            // safely set values into the SQL query placeholder ? with the email
+            stmt.setString(1, email);
+            // execute select statement and returns instantiated User object
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding by email.", e);
+        }
+    }// findByEmail
+
     // convert a user from the result set into a User object
     private User extractUser(ResultSet rs) throws SQLException {
         // It shifts the cursor to the next row of the result set from the database and returns true if there is any row, otherwise false.
