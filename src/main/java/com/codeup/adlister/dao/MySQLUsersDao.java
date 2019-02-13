@@ -3,7 +3,6 @@ import com.codeup.adlister.models.Config;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 import java.sql.*;
-import com.codeup.adlister.util.Password;
 
 public class MySQLUsersDao implements Users {
     private Connection connection;
@@ -57,8 +56,7 @@ public class MySQLUsersDao implements Users {
             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, user.getUsername());
             stmt.setString(2, user.getEmail());
-            // 1. Make sure passwords are being hashed before they enter the database.
-            stmt.setString(3, Password.hash(user.getPassword()));
+            stmt.setString(3, user.getPassword());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
