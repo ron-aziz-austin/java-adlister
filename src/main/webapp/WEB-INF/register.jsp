@@ -72,4 +72,5 @@
         </form>
     </div>
 </body>
+<jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </html>
