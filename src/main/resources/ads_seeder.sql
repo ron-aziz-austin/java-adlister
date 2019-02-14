@@ -12,7 +12,8 @@ INSERT INTO ads (user_id,
                 city,
                 zip_code,
                 classified_status_id,
-                price_type_id)
+                price_type_id,
+                price)
 VALUES (1,
         9,
         'Canon EOS 7D 18MP CMOS Digital SLR',
@@ -23,4 +24,5 @@ VALUES (1,
         'San Antonio',
         12345,
         1,
-        1);
+        1,
+        120.25);
