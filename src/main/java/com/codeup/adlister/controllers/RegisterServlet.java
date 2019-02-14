@@ -23,6 +23,17 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
+        //---new values---
+        String first_name = request.getParameter("first_name");
+        String last_name = request.getParameter("last_name");
+        String phone_number = request.getParameter("phone_number");
+        String join_date = request.getParameter("join_date");
+        String posts = request.getParameter("posts");
+        String website = request.getParameter("website");
+        String user_bio = request.getParameter("user_bio");
+        String user_fb = request.getParameter("user_fb");
+        String user_twitter = request.getParameter("user_twitter");
+        String user_linkedin = request.getParameter("user_linkedin");
 
         boolean inputHasErrors = username.isEmpty()
                 || email.isEmpty()
@@ -54,9 +65,11 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
+
+
         // hash password
         // create a new User object
-        User newUser = new User(username, email, Password.hash(password));
+        User newUser = new User(first_name, last_name, email, username, Password.hash(password), join_date, posts, website, phone_number, user_bio, user_fb,user_twitter, user_linkedin);
         // insert the new user into the users table
         DaoFactory.getUsersDao().insert(newUser);
 
@@ -65,6 +78,8 @@ public class RegisterServlet extends HttpServlet {
         request.getSession().setAttribute("user", user);
         // login to profile
         response.sendRedirect("/profile");
+
+
 
     }// doPost
 
