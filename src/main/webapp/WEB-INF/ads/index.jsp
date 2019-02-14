@@ -139,95 +139,37 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
-    <%--<div class="container">--%>
-        <%--<h1>Here Are all the ads!</h1>--%>
-        <%--<c:forEach var="ad" items="${ads}">--%>
-            <%--<div class="col-md-6">--%>
-                <%--<h2>--%>
-                    <%--<c:out value="${ad.title}" />--%>
-                <%--</h2>--%>
-                <%--<p>--%>
-                    <%--<c:out value="${ad.description}" />--%>
-                <%--</p>--%>
-            <%--</div>--%>
-        <%--</c:forEach>--%>
-    <%--</div>--%>
-
-    <%--<nav aria-label="...">--%>
-        <%--<ul class="pagination">--%>
-            <%--<li class="page-item disabled">--%>
-                <%--<a class="page-link" href="#" tabindex="-1">Previous</a>--%>
-            <%--</li>--%>
-            <%--<li class="page-item"><a class="page-link" href="#">1</a></li>--%>
-            <%--<li class="page-item active">--%>
-                <%--<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>--%>
-            <%--</li>--%>
-            <%--<li class="page-item"><a class="page-link" href="#">3</a></li>--%>
-            <%--<li class="page-item">--%>
-                <%--<a class="page-link" href="#">Next</a>--%>
-            <%--</li>--%>
-        <%--</ul>--%>
-    <%--</nav>--%>
-
-<%--================================================================--%>
-            <h1>Here Are all the ads!</h1>
-
+    <h1 style="text-align: center">Here Are all the ads!</h1>
     <div class="container" id="jar">
-
-            <c:forEach var="ad" items="${ads}">
-
-
-        <div class="row mx-auto content">
-            <article>
-                <%--Classified image--%>
-                <div class="columnI">
-                    <a href="#">
-                        <img
-                        src="https://images-na.ssl-images-amazon.com/images/I/41uGNGhqZCL.jpg" alt="">
-                    </a>
-                </div>
-                <%--Ad Copy--%>
-                <div class="columnI">
-                    <h5>
-                        <c:out value="${ad.title}" />
-                    </h5>
-                    <p>
-                        <c:out value="${ad.description}" />
-                    </p>
-                </div>
-            </article>
-        </div>
-
-
-
-            </c:forEach>
-
-<%--================================================================--%>
-
-
-
-<%--================================================================--%>
-        <div class="row mx-auto content">
-            <div class="col">
-                <img src="http://via.placeholder.com/350x150">
+        <c:forEach var="ad" items="${ads}">
+            <div class="mx-auto content">
+                <article style="border: 1px solid black" class="row">
+                    <%--Classified image--%>
+                    <div class="square col-3">
+                        <a href="#">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/41uGNGhqZCL.jpg" alt="image" class="landscape">
+                        </a>
+                    </div>
+                    <%--Ad Copy--%>
+                    <div class="ad-copy col-8">
+                        <h5><c:out value="${ad.title}" /></h5>
+                        <%--<p>--%>
+                            <%--<c:out value="${ad.description}" />--%>
+                        <%--</p>--%>
+                        <p>Category | By First Last</p>
+                        <p><span>Location:</span> 123 Street Address</p>
+                        <p>city state, zip code</p>
+                    </div>
+                    <div class="col-1">
+                        <p>Price</p>
+                    </div>
+                </article>
             </div>
-            <div class="col">
-                <img src="http://via.placeholder.com/350x150">
-            </div>
-        </div>
-<%--================================================================--%>
-
-
-
-
+        </c:forEach>
     <nav>
         <ul class="pagination justify-content-center pagination-sm">
         </ul>
     </nav>
-
-
-
+    <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </body>
-<jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </html>
