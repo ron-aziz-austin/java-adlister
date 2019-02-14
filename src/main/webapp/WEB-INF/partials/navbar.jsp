@@ -7,13 +7,14 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 
-    <li><a href="/register">Register</a></li>
+
     <c:choose>
         <c:when test="${sessionScope.user != null}">
-            <li><a href="/logout">Logout</a></li>
+            <a href="/logout">Logout</a>
         </c:when>
         <c:otherwise>
-            <li><a href="/login">Login</a></li>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
         </c:otherwise>
     </c:choose>
 </nav>
@@ -31,7 +32,13 @@
                 <a class="nav-link">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">My Profile</a>
+                <a href="/profile" class="nav-link">My Profile</a>
+            </li>
+            <li class="nav-item">
+                <a href="/ads" class="nav-link">List all Ads</a>
+            </li>
+            <li class="nav-item">
+                <a href="/ads/create" class="nav-link">Create Ad</a>
             </li>
         </ul>
     </div>
