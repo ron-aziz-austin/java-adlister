@@ -13,4 +13,5 @@
         <h1>Welcome, <c:out value="${sessionScope.user.username}" />!</h1>
     </div>
 </body>
+<jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </html>
