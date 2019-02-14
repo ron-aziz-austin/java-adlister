@@ -32,7 +32,7 @@
             <%--phone number--%>
                 <div class="form-group">
                     <label for="phone_number">Phone Number</label>
-                    <input id="phone_number" name="phone_number" class="form-control" type="tel" required>
+                    <input id="phone_number" name="phone_number" class="form-control" type="text" required>
                 </div>
             <%--Username--%>
             <div class="form-group">
@@ -49,21 +49,31 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password" required>
             </div>
+
+
+
+
+
+
+
+
+
+
                 <%--fb--%>
-                <div class="form-group">
-                    <label for="user_fb">Facebook profile (optional)</label>
-                    <input id="user_fb" name="phone_number" class="form-control" type="text" required>
-                </div>
-                <%--twitter--%>
-                <div class="form-group">
-                    <label for="user_fb">Twitter profile (optional)</label>
-                    <input id="user_twitter" name="user_twitter" class="form-control" type="text" required>
-                </div>
-                <%--linkedin--%>
-                <div class="form-group">
-                    <label for="user_linkedin">LinkedIn profile (optional)</label>
-                    <input id="user_linkedin" name="user_linkedin" class="form-control" type="text" required>
-                </div>
+                <%--<div class="form-group">--%>
+                    <%--<label for="user_fb">Facebook profile (optional)</label>--%>
+                    <%--<input id="user_fb" name="phone_number" class="form-control" type="text" required>--%>
+                <%--</div>--%>
+                <%--&lt;%&ndash;twitter&ndash;%&gt;--%>
+                <%--<div class="form-group">--%>
+                    <%--<label for="user_fb">Twitter profile (optional)</label>--%>
+                    <%--<input id="user_twitter" name="user_twitter" class="form-control" type="text" required>--%>
+                <%--</div>--%>
+                <%--&lt;%&ndash;linkedin&ndash;%&gt;--%>
+                <%--<div class="form-group">--%>
+                    <%--<label for="user_linkedin">LinkedIn profile (optional)</label>--%>
+                    <%--<input id="user_linkedin" name="user_linkedin" class="form-control" type="text" required>--%>
+                <%--</div>--%>
 
 
 

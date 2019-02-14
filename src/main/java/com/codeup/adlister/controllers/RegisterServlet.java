@@ -19,22 +19,26 @@ public class RegisterServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // get user input
-        String username = request.getParameter("username");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        String passwordConfirmation = request.getParameter("confirm_password");
-        //---new values---
         String first_name = request.getParameter("first_name");
         String last_name = request.getParameter("last_name");
+        String email = request.getParameter("email");
         String phone_number = request.getParameter("phone_number");
-        String join_date = request.getParameter("join_date");
-        String posts = request.getParameter("posts");
-        String website = request.getParameter("website");
-        String user_bio = request.getParameter("user_bio");
-        String user_fb = request.getParameter("user_fb");
-        String user_twitter = request.getParameter("user_twitter");
-        String user_linkedin = request.getParameter("user_linkedin");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String passwordConfirmation = request.getParameter("confirm_password");
 
+
+
+
+//        String join_date = request.getParameter("join_date");
+//        String posts = request.getParameter("posts");
+//        String website = request.getParameter("website");
+//        String user_bio = request.getParameter("user_bio");
+//        String user_fb = request.getParameter("user_fb");
+//        String user_twitter = request.getParameter("user_twitter");
+//        String user_linkedin = request.getParameter("user_linkedin");
+
+        // TODO add more checks
         boolean inputHasErrors = username.isEmpty()
                 || email.isEmpty()
                 || password.isEmpty();
@@ -69,7 +73,7 @@ public class RegisterServlet extends HttpServlet {
 
         // hash password
         // create a new User object
-        User newUser = new User(first_name, last_name, email, username, Password.hash(password), join_date, posts, website, phone_number, user_bio, user_fb,user_twitter, user_linkedin);
+        User newUser = new User(first_name, last_name, username, email, Password.hash(password), phone_number);
         // insert the new user into the users table
         DaoFactory.getUsersDao().insert(newUser);
 
