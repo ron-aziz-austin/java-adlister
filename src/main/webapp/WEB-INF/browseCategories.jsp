@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container-fluid">
+    <h2>Browse Categories</h2>
     <section class="category_list_wrap row">
         <article class="category_list large-4 medium-4 small-6 xsmall-12 columns">
             <h3>
