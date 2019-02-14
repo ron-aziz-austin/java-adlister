@@ -51,12 +51,22 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public Long insert(User user) {
-        String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
+        String query = "INSERT INTO users(first_name, last_name, email, username, password, join_date, posts, website, phone_number, user_bio, user_fb,user_twitter, user_linkedin ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-            stmt.setString(1, user.getUsername());
-            stmt.setString(2, user.getEmail());
-            stmt.setString(3, user.getPassword());
+            stmt.setString(1, user.getFirst_name());
+            stmt.setString(2, user.getLast_name());
+            stmt.setString(3, user.getEmail());
+            stmt.setString(4, user.getUsername());
+            stmt.setString(5, user.getPassword());
+            stmt.setString(6, user.getJoin_date());
+            stmt.setString(7, user.getPosts());
+            stmt.setString(8, user.getWebsite());
+            stmt.setString(9, user.getPhone_number());
+            stmt.setString(10, user.getUser_bio());
+            stmt.setString(11, user.getUser_fb());
+            stmt.setString(12, user.getUser_twitter());
+            stmt.setString(13, user.getUser_linkedin());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();

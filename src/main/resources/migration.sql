@@ -11,14 +11,14 @@ CREATE TABLE IF NOT EXISTS users (
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    join_date DATE NOT NULL,
-    posts INT UNSIGNED NOT NULL,
-    website VARCHAR(255),
+#     join_date DATE DEFAULT CURRENT_DATE(),
+#     posts INT UNSIGNED NOT NULL,
+#     website VARCHAR(255),
     phone_number VARCHAR(10) NOT NULL CHECK (phone_number between 0 and 9999999999),
-    user_bio VARCHAR(350), # maybe make this varchar(x)?
-    user_fb varchar(250),
-    user_twitter varchar(250),
-    user_linkedin varchar(250),
+#     user_bio VARCHAR(350), # maybe make this varchar(x)?
+#     user_fb varchar(250),
+#     user_twitter varchar(250),
+#     user_linkedin varchar(250),
     PRIMARY KEY (id),
     UNIQUE (username),
     UNIQUE (email)
