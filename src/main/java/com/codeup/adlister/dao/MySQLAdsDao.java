@@ -37,11 +37,17 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
+            String insertQuery = "INSERT INTO ads(user_id, category_id, title, description, listed_on, country, location, city, zip_code, classified_status_id, price_type_id, price) VALUES (?,?,?,?,CURRENT_TIMESTAMP,'United States',?,?,?,1,?,?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
-            stmt.setString(2, ad.getTitle());
-            stmt.setString(3, ad.getDescription());
+            stmt.setLong(2, ad.getCategoryId());
+            stmt.setString(3, ad.getTitle());
+            stmt.setString(4, ad.getDescription());
+            stmt.setString(5, ad.getLocation());
+            stmt.setString(6, ad.getCity());
+            stmt.setInt(7, ad.getZipCode());
+            stmt.setInt(8, ad.getPriceTypeId());
+            stmt.setDouble(9, ad.getPrice());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -55,8 +61,17 @@ public class MySQLAdsDao implements Ads {
         return new Ad(
             rs.getLong("id"),
             rs.getLong("user_id"),
+            rs.getLong("category_id"),
             rs.getString("title"),
-            rs.getString("description")
+            rs.getString("description"),
+            rs.getString("listed_on"),
+            rs.getString("country"),
+            rs.getString("location"),
+            rs.getString("city"),
+            rs.getInt("zip_code"),
+            rs.getInt("classified_status_id"),
+            rs.getInt("price_type_id"),
+            rs.getDouble("price")
         );
     }
 
