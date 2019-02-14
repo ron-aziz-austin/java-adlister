@@ -1,13 +1,21 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav class="navbar navbar-expand-md navbar-light bg-light">
 
-    <a class="navbar-brand mr-auto" href="#">Adlister</a>
+    <a class="navbar-brand mr-auto" href="">Adlister</a>
     <form class="form-inline mx-auto my-lg-0 d-none d-sm-none d-md-block">
         <input class="form-control ml-sm- 2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 
-    <a class="navbar-nav ml-auto" >Login</a>
+    <li><a href="/register">Register</a></li>
+    <c:choose>
+        <c:when test="${sessionScope.user != null}">
+            <li><a href="/logout">Logout</a></li>
+        </c:when>
+        <c:otherwise>
+            <li><a href="/login">Login</a></li>
+        </c:otherwise>
+    </c:choose>
 </nav>
 <!--navbar 2 on md screens and larger-->
 <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -62,12 +70,3 @@
 
 
 
-<%--<li><a href="/register">Register</a></li>--%>
-<%--<c:choose>--%>
-    <%--<c:when test="${sessionScope.user != null}">--%>
-        <%--<li><a href="/logout">Logout</a></li>--%>
-    <%--</c:when>--%>
-    <%--<c:otherwise>--%>
-        <%--<li><a href="/login">Login</a></li>--%>
-    <%--</c:otherwise>--%>
-<%--</c:choose>--%>
