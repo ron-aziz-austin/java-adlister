@@ -31,7 +31,13 @@
                 <a class="nav-link">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">My Profile</a>
+                <a href="/profile" class="nav-link">My Profile</a>
+            </li>
+            <li class="nav-item">
+                <a href="/ads" class="nav-link">List all Ads</a>
+            </li>
+            <li class="nav-item">
+                <a href="/ads/create" class="nav-link">Create Ad</a>
             </li>
         </ul>
     </div>
