@@ -46,6 +46,17 @@ CREATE TABLE IF NOT EXISTS price_type (
 );
 
 SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS category;
+SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE IF NOT EXISTS category (
+  parent_id INT UNSIGNED,
+  category_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  title CHAR(50) NOT NULL,
+  PRIMARY KEY (category_id)
+);
+
+SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS ads;
 SET FOREIGN_KEY_CHECKS = 1;
 
@@ -53,6 +64,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 CREATE TABLE IF NOT EXISTS ads (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   user_id INT UNSIGNED NOT NULL,
+  category_id INT UNSIGNED NOT NULL,
   title VARCHAR(255) NOT NULL,
   description TEXT NOT NULL,
   listed_on DATE NOT NULL,
@@ -65,6 +77,7 @@ CREATE TABLE IF NOT EXISTS ads (
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users (id)
     ON DELETE CASCADE,
+  FOREIGN KEY (category_id) REFERENCES category (category_id),
   FOREIGN KEY (classified_status_id) REFERENCES classified_status (id),
   FOREIGN KEY (price_type_id) REFERENCES price_type (id)
 );

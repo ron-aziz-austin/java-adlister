@@ -2,14 +2,8 @@ USE adlister_db;
 
 TRUNCATE ads;
 
--- INSERT INTO ads (user_id, title, description)
--- VALUES (1, "playstation for sale", "This is a slightly used playstation"),
---        (1, "Super Nintendo", "Get your game on with this old-school classic!"),
---        (1, "Junior Java Developer Position", "Minimum 7 years of experience required."),
---        (1, "JavaScript Developer needed", "Must have strong Java skills"),
---        (1,	"DJI Mavic Pro", "Drone with 4K HD Camera & Extra Battery");
-
 INSERT INTO ads (user_id,
+                category_id,
                 title,
                 description,
                 listed_on,
@@ -20,8 +14,9 @@ INSERT INTO ads (user_id,
                 classified_status_id,
                 price_type_id)
 VALUES (1,
-        'Rolex',
-        'Watch',
+        9,
+        'Canon EOS 7D 18MP CMOS Digital SLR',
+        'The new EOS 7D represents a whole new class of camera, with a host of brand new features designed to enhance every facet of the photographic process, from still images to video.',
         CURRENT_DATE(),
         'United States',
         '1234 Broad Street',
