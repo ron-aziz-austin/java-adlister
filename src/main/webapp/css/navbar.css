@@ -1,0 +1,39 @@
+#nav-1 .even-spacer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-2 {
+    height: 40px;
+    margin-bottom: 80px;
+}
+
+#nav-2 ul {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-2 li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+}
+
+.navbar-sec {
+    background: #FAF8F8;
+    border-radius: 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 17px;
+    z-index: 100;
+    font-weight: bolder;
+    margin: 0 auto;
+    font-size: 1.2em;
+    width: 100%;
+}

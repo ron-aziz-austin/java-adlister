@@ -1,26 +1,32 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-
-    <a class="navbar-brand mr-auto" href="">Adlister</a>
-    <form class="form-inline mx-auto my-lg-0 d-none d-sm-none d-md-block">
-        <input class="form-control ml-sm- 2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
-
-    <c:choose>
-        <c:when test="${sessionScope.user != null}">
-            <a href="/logout">Logout</a>
-        </c:when>
-        <c:otherwise>
-            <a href="/register">Register</a>
-            <a href="/login">Login</a>
-        </c:otherwise>
-    </c:choose>
+<header class="">
+<nav id="nav-1" class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+        <div class="even-spacer">
+            <a class="navbar-brand d-inline" href="">Adlister</a>
+        </div>
+        <div class="even-spacer">
+            <form class="form-inline my-lg-0 d-none d-sm-none d-md-block">
+                <input class="form-control ml-sm- 2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="even-spacer">
+            <c:choose>
+                <c:when test="${sessionScope.user != null}">
+                    <a href="/logout">Logout</a>
+                </c:when>
+                <c:otherwise>
+                    <a href="/register">Register</a>
+                    <a href="/login">Login</a>
+                </c:otherwise>
+            </c:choose>
+        </div>
+    </div>
 </nav>
 <!--navbar 2 on md screens and larger-->
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="d-none d-sm-none d-md-block">
+<nav id="nav-2" class="navbar navbar-expand-md navbar-light bg-light nav-wrapper">
+    <div class="d-none d-sm-none d-md-block navbar-sec container">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link">Categories</a>
@@ -69,11 +75,5 @@
             </ul>
         </div>
     </div>
-
 </nav>
-
-
-
-
-
-
+</header>
