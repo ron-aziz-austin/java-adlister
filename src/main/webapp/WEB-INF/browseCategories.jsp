@@ -13,14 +13,14 @@
                 </div>
 
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#" >Fashion &amp; Beauty</a>
-                        <li class="list-group-item"><a href="#">Accessories</a>
+                        <li class="list-group-item py-0"><a href="#" >Fashion &amp; Beauty</a>
+                        <li class="list-group-item py-0"><a href="#">Accessories</a>
                         </li>
-                        <li class="list-group-item"><a href="#">Cloths</a>
+                        <li class="list-group-item py-0"><a href="#">Cloths</a>
                         </li>
-                        <li class="list-group-item"><a href="#">Footwear</a>
+                        <li class="list-group-item py-0"><a href="#">Footwear</a>
                         </li>
-                        <li class="list-group-item"><a href="#">Abstract</a>
+                        <li class="list-group-item py-0"><a href="#">Abstract</a>
                         </li>
                     </ul>
                 </li>
@@ -40,10 +40,10 @@
                 <li class="list-group-item">
                     <a href="#">Magazines</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Other hobbies</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
@@ -58,16 +58,16 @@
                 <li class="list-group-item">
                     <a href="#">Canon</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Nikon</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Panasonic</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Sony</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
@@ -79,16 +79,16 @@
             </h3>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Computers</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Mobile accessories</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">TV</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
@@ -101,18 +101,18 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                    <a href="#">Books</a>
+                    <a href="#" class="py-0">Books</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Games</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Movie DVDs</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Music</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
@@ -127,16 +127,16 @@
                 <li class="list-group-item">
                     <a href="#">Customer Service</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">IT</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Marketing</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Part-time</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
@@ -148,14 +148,14 @@
             </h3>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="#">Cloths &amp; Footwear</a>
+                <li class="list-group-item py-0"><a href="#">Cloths &amp; Footwear</a>
                 </li>
-                <li class="list-group-item"><a href="#">Kids Furniture</a>
+                <li class="list-group-item py-0"><a href="#">Kids Furniture</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Toys &amp; Games</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
@@ -167,13 +167,13 @@
             </h3>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Mobile Phones</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Tablets</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
@@ -185,16 +185,16 @@
             </h3>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Bicycle</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Bike</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">Car</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item py-0">
                     <a href="#">View all »</a>
                 </li>
             </ul>
