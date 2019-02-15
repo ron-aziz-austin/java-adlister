@@ -55,8 +55,8 @@ public class CategoryDao implements Categories {
             return null;
         }
         return new Category(
-                rs.getLong("parentId"),
-                rs.getLong("categoryId"),
+                rs.getLong("parent_id"),
+                rs.getLong("category_id"),
                 rs.getString("title")
         );
     }// extractCategory
