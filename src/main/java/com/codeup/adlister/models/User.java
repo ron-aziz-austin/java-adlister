@@ -35,6 +35,11 @@ public class User {
         this.phone_number = phone_number;
     }
 
+    public User(long id, String first_name, String last_name) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+    }
 
     //---
 //    public User(String username, String email, String first_name, String last_name, String phone_number, String password, String website, String join_date, String posts, String user_bio, String user_fb, String user_twitter, String user_linkedin) {
