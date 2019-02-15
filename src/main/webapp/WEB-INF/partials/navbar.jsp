@@ -3,7 +3,7 @@
 <nav id="nav-1" class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container">
         <div class="even-spacer">
-            <a class="navbar-brand d-inline" href="">Adlister</a>
+            <a class="navbar-brand d-inline" href="/home">Adlister</a>
         </div>
         <div class="even-spacer">
             <form class="form-inline my-lg-0 d-none d-sm-none d-md-block">
