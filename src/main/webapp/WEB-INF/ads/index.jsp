@@ -153,12 +153,12 @@
                     <%--Ad Copy--%>
                     <div class="ad-copy col-8">
                         <h5><c:out value="${ad.title}" /></h5>
-                        <%--<p>--%>
+                            <%--<p>--%>
                             <%--<c:out value="${ad.description}" />--%>
-                        <%--</p>--%>
-                        <p>Category | By First Last</p>
-                        <p><span>Location:</span> 123 Street Address</p>
-                        <p>city state, zip code</p>
+                            <%--</p>--%>
+                        <p><c:out value="${ad.categoryId}"/> | By <c:out value="${ad.userId}"/></p>
+                        <p><span>Location:</span> <c:out value="${ad.location}"/></p>
+                        <p><c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
                     </div>
                     <div class="col-1">
                         <p>Price</p>
