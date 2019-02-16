@@ -51,9 +51,6 @@ public class CategoryDao implements Categories {
     }
 
     private Category extractCategory(ResultSet rs) throws SQLException {
-        if (! rs.next()) {
-            return null;
-        }
         return new Category(
                 rs.getLong("parent_id"),
                 rs.getLong("category_id"),
