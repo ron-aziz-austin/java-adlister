@@ -37,7 +37,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, category_id, title, description, listed_on, country, location, city, zip_code, classified_status_id, price_type_id, price) VALUES (?,?,?,?,CURRENT_TIMESTAMP,'United States',?,?,?,1,?,?)";
+            String insertQuery = "INSERT INTO ads(user_id, category_id, title, description, listed_on, location, city, zip_code, classified_status_id, price_type_id, price, image) VALUES (?,?,?,?,CURRENT_TIMESTAMP,?,?,?,1,?,?,'https://picsum.photos/200/300/?random')";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setLong(2, ad.getCategoryId());
@@ -65,13 +65,13 @@ public class MySQLAdsDao implements Ads {
             rs.getString("title"),
             rs.getString("description"),
             rs.getString("listed_on"),
-            rs.getString("country"),
             rs.getString("location"),
             rs.getString("city"),
             rs.getInt("zip_code"),
             rs.getInt("classified_status_id"),
             rs.getInt("price_type_id"),
-            rs.getDouble("price")
+            rs.getDouble("price"),
+            rs.getString("image")
         );
     }
 

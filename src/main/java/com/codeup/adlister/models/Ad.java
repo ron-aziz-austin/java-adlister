@@ -7,28 +7,28 @@ public class Ad {
     private String title;
     private String description;
     private String listedOn;
-    private String country;
     private String location;
     private String city;
     private int zipCode;
     private int classifiedStatusId;
     private int priceTypeId;
     private double price;
+    private String image;
 
-    public Ad(long id, long userId, long categoryId, String title, String description, String listedOn, String country, String location, String city, int zipCode, int classifiedStatusId, int priceTypeId, double price) {
+    public Ad(long id, long userId, long categoryId, String title, String description, String listedOn, String location, String city, int zipCode, int classifiedStatusId, int priceTypeId, double price, String image) {
         this.id = id;
         this.userId = userId;
         this.categoryId = categoryId;
         this.title = title;
         this.description = description;
         this.listedOn = listedOn;
-        this.country = country;
         this.location = location;
         this.city = city;
         this.zipCode = zipCode;
         this.classifiedStatusId = classifiedStatusId;
         this.priceTypeId = priceTypeId;
         this.price = price;
+        this.image = image;
     }
 
     public Ad(long userId, long categoryId, String title, String description, String location, String city, int zipCode, int priceTypeId, double price) {
@@ -42,19 +42,6 @@ public class Ad {
         this.priceTypeId = priceTypeId;
         this.price = price;
     }
-
-//    public Ad(long id, long userId, String title, String description) {
-//        this.id = id;
-//        this.userId = userId;
-//        this.title = title;
-//        this.description = description;
-//    }
-
-//    public Ad(long userId, String title, String description) {
-//        this.userId = userId;
-//        this.title = title;
-//        this.description = description;
-//    }
 
     public long getCategoryId() {
         return categoryId;
@@ -70,14 +57,6 @@ public class Ad {
 
     public void setListedOn(String listedOn) {
         this.listedOn = listedOn;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     public String getLocation() {
@@ -158,5 +137,13 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
