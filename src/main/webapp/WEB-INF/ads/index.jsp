@@ -142,12 +142,13 @@
     <h1 style="text-align: center">Here Are all the ads!</h1>
     <div class="container" id="jar">
         <c:forEach var="ad" items="${ads}">
+            <c:set var="i" value="${ad.categoryId}"/>
             <div class="mx-auto content">
                 <article style="border: 1px solid black" class="row">
                     <%--Classified image--%>
                     <div class="square col-3">
                         <a href="#">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/41uGNGhqZCL.jpg" alt="image" class="landscape">
+                            <img src="${ad.image}" alt="image" class="landscape">
                         </a>
                     </div>
                     <%--Ad Copy--%>
@@ -156,12 +157,12 @@
                             <%--<p>--%>
                             <%--<c:out value="${ad.description}" />--%>
                             <%--</p>--%>
-                        <p><c:out value="${ad.categoryId}"/> | By <c:out value="${ad.userId}"/></p>
+                        <p><c:out value="${categories[i].title}"/> | By <c:out value="${ad.userId}"/></p>
                         <p><span>Location:</span> <c:out value="${ad.location}"/></p>
                         <p><c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
                     </div>
                     <div class="col-1">
-                        <p>Price</p>
+                        <p>$${ad.price}</p>
                     </div>
                 </article>
             </div>
