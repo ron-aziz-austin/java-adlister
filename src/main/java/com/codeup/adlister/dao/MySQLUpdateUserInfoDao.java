@@ -41,7 +41,7 @@ public abstract class MySQLUpdateUserInfoDao implements Users {
             rs.next();
             return rs.getLong(1);
         } catch (SQLException e) {
-            throw new RuntimeException("Error creating new user", e);
+            throw new RuntimeException("Error updating new user", e);
         }
     }
 

@@ -37,45 +37,45 @@
 
                     <form action="/profile/edit" method="post" class="form-horizontal" role="form">
                         <div class="form-group">
-                            <label for="first_name" class="col-lg-3 control-label">First name:</label>
+                            <label for="first_name_edit" class="col-lg-3 control-label">First name:</label>
                             <div class="col-lg-8">
-                                <input id="first_name" class="form-control" type="text" value="First Name">
+                                <input id="first_name_edit" class="form-control" type="text" value=<c:out value="${sessionScope.user.first_name}"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="last_name" class="col-lg-3 control-label">Last name:</label>
+                            <label for="last_name_edit" class="col-lg-3 control-label">Last name:</label>
                             <div class="col-lg-8">
-                                <input id="last_name" class="form-control" type="text" value="Last Name">
+                                <input id="last_name_edit" class="form-control" type="text" value=" <c:out value="${sessionScope.user.last_name}"/>">
                             </div>
                         </div>
+                        <%--<div class="form-group">--%>
+                            <%--<label for="company" class="col-lg-3 control-label">Company:</label>--%>
+                            <%--<div class="col-lg-8">--%>
+                                <%--<input id="company" class="form-control" type="text" value="">--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
                         <div class="form-group">
-                            <label for="company" class="col-lg-3 control-label">Company:</label>
+                            <label for="email_edit" class="col-lg-3 control-label">Email:</label>
                             <div class="col-lg-8">
-                                <input id="company" class="form-control" type="text" value="">
+                                <input id="email_edit" class="form-control" type="text" value=<c:out value="${sessionScope.user.email}"/>>
                             </div>
                         </div>
+                        <%--<div class="form-group">--%>
+                            <%--<label for="username_edit" class="col-md-3 control-label">Username:</label>--%>
+                            <%--<div class="col-md-8">--%>
+                                <%--<input id="username_edit" class="form-control" type="text" value="Username">--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
                         <div class="form-group">
-                            <label for="email" class="col-lg-3 control-label">Email:</label>
-                            <div class="col-lg-8">
-                                <input id="email" class="form-control" type="text" value="Email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="username" class="col-md-3 control-label">Username:</label>
+                            <label for="password_edit" class="col-md-3 control-label">Password:</label>
                             <div class="col-md-8">
-                                <input id="username" class="form-control" type="text" value="Username">
+                                <input id="password_edit" class="form-control" type="password" value="11111122333">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="password" class="col-md-3 control-label">Password:</label>
+                            <label for="confirm_password_edit" class="col-md-3 control-label">Confirm password:</label>
                             <div class="col-md-8">
-                                <input id="password" class="form-control" type="password" value="11111122333">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm_password" class="col-md-3 control-label">Confirm password:</label>
-                            <div class="col-md-8">
-                                <input id="confirm_password" class="form-control" type="password" value="11111122333">
+                                <input id="confirm_password_edit" class="form-control" type="password" value="11111122333">
                             </div>
                         </div>
                         <div class="form-group">
