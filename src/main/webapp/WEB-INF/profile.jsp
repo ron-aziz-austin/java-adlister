@@ -14,11 +14,13 @@
     <div class="card mb-3" style="max-width: 1000px;">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="https://media3.giphy.com/media/3o751Yxe9UjX26BZbG/giphy.gif" class="card-img" alt="...">
+                <img src="https://propertymarketersllc.com/wp-content/uploads/2018/05/profile-picture-placeholder.png" class="card-img rounded img-thumbnail" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h2 class="card-title"><c:out value="${sessionScope.user.username}"/> </h2>
+                    <h2 class="card-title"><c:out value="${sessionScope.user.username}"/> <button type="button" onclick="edit()" id="edit-profile" class="btn btn-primary btn-sm">Edit Profile</button>
+                    </h2>
+
                     <p class="card-text">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">First name: <c:out value="${sessionScope.user.first_name}"/></li>
@@ -29,6 +31,7 @@
                     </p>
                     <p class="card-text">
                         <small class="text-muted"> Social Media:</small>
+                        <br>
                         <button type="button" class="btn btn-fb"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
                         <button type="button" class="btn btn-tw"><i class="fab fa-twitter pr-1"></i> Twitter</button>
                         <button type="button" class="btn btn-li"><i class="fab fa-linkedin-in pr-1"></i> Linkedin</button>
@@ -38,6 +41,13 @@
             </div>
         </div>
     </div>
+    <script>
+        // redirects to edit profile page
+        //needs to be updated to a valid url eventually
+        function edit() {
+            location.href = "http://localhost:8080/profile/edit";
+        }
+    </script>
 </body>
 <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </html>
