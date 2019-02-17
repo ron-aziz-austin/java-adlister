@@ -27,6 +27,8 @@ public class EditProfileServlet extends HttpServlet {
         // save user id
         String userId = userData.getId() + "";
 
+
+
         String first_name = request.getParameter("first_name_edit");
         String last_name = request.getParameter("last_name_edit");
         String email = request.getParameter("email_edit");
@@ -34,6 +36,7 @@ public class EditProfileServlet extends HttpServlet {
 //        String username = request.getParameter("username_edit");
         String password = request.getParameter("password_edit");
         String passwordConfirmation = request.getParameter("confirm_password_edit");
+
 
 
 

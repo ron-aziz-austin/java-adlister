@@ -69,13 +69,13 @@
                         <div class="form-group">
                             <label for="password_edit" class="col-md-3 control-label">Password:</label>
                             <div class="col-md-8">
-                                <input id="password_edit" class="form-control" type="password" value="11111122333">
+                                <input id="password_edit" class="form-control" type="password" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="confirm_password_edit" class="col-md-3 control-label">Confirm password:</label>
                             <div class="col-md-8">
-                                <input id="confirm_password_edit" class="form-control" type="password" value="11111122333">
+                                <input id="confirm_password_edit" class="form-control" type="password" >
                             </div>
                         </div>
                         <div class="form-group">
