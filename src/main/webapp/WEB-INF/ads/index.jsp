@@ -172,6 +172,7 @@
         <ul class="pagination justify-content-center pagination-sm">
         </ul>
     </nav>
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </body>
 </html>

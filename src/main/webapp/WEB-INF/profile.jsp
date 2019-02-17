@@ -8,9 +8,9 @@
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
 </head>
+<body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-<body>
     <div class="card mb-3" style="max-width: 1000px;">
         <div class="row no-gutters">
             <div class="col-md-4">
@@ -48,6 +48,7 @@
             location.href = "http://localhost:8080/profile/edit";
         }
     </script>
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
+    <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </body>
-<jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </html>

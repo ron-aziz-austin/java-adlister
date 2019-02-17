@@ -11,6 +11,7 @@
         <jsp:include page="/WEB-INF/partials/navbar.jsp" />
         <jsp:include page="/WEB-INF/partials/home_page_categories.jsp" />
         <jsp:include page="/WEB-INF/browseCategories.jsp"/>
+        <jsp:include page="/WEB-INF/partials/footer.jsp" />
         <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
     </body>
 </html>
