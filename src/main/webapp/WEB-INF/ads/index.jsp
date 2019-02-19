@@ -139,7 +139,34 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <h1 style="text-align: center">Here Are all the ads!</h1>
+
+    <div class="container p-0">
+        <form class="input-group" method="post" action="/ads">
+            <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect04" name="category">
+                    <option value="1">Kids Products</option>
+                    <option value="2">Entertainment</option>
+                    <option value="3">Camera</option>
+                    <option value="4">Computers & Laptops</option>
+                    <option value="5">Fashion & Beauty</option>
+                    <option value="6">Jobs</option>
+                    <option value="7">Clothes & Footwear</option>
+                    <option value="8">Books</option>
+                    <option value="9">Canon</option>
+                    <option value="9">Nikon</option>
+                    <option value="9">Sony</option>
+                    <option value="9">Laptop</option>
+                    <option value="9">Footwear</option>
+                    <option value="9">IT</option>
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <%--<h1 style="text-align: center">Here Are all the ads!</h1>--%>
     <div class="container" id="jar">
         <c:forEach var="ad" items="${ads}">
             <c:set var="i" value="${ad.categoryId}"/>
