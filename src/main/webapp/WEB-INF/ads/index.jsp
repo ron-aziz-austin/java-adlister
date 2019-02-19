@@ -154,7 +154,7 @@
                     </div>
                     <%--Ad Copy--%>
                     <div class="ad-copy col-8">
-                        <h5><c:out value="${ad.title}" /></h5>
+                        <a href="/adIndex?adId=${ad.id}"><h5><c:out value="${ad.title}" /></h5></a>
                             <%--<p>--%>
                             <%--<c:out value="${ad.description}" />--%>
                             <%--</p>--%>
