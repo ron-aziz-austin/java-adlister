@@ -1,5 +1,8 @@
 package com.codeup.adlister.controllers;
+import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.dao.MySQLUsersDao;
 import com.codeup.adlister.models.User;
+import com.codeup.adlister.util.Password;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,25 +25,67 @@ public class EditProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // get user from session
+//        // get user from session
         User userData = (User) request.getSession().getAttribute("user");
-        // save user id
-        String userId = userData.getId() + "";
+//        // save user id
+        Long userId = userData.getId();
 
 
 
         String first_name = request.getParameter("first_name_edit");
         String last_name = request.getParameter("last_name_edit");
         String email = request.getParameter("email_edit");
-        String phone_number = request.getParameter("phone_number_edit");
-//        String username = request.getParameter("username_edit");
+//        String phone_number = request.getParameter("phone_number_edit");
         String password = request.getParameter("password_edit");
         String passwordConfirmation = request.getParameter("confirm_password_edit");
+//        String username = request.getParameter("username_edit");
+//        boolean submit = request.getParameter("submit") != null;
+
+
+//        boolean inputHasErrors = email.isEmpty()
+//                || password.isEmpty();
+
+        // validate user input
+//        if (inputHasErrors) {
+//            request.setAttribute("inputErrors", "Invalid inputs!");
+//            request.getRequestDispatcher("WEB-INF/edit_profile.jsp").forward(request, response);
+//        } else if (!password.equals(passwordConfirmation)) {
+//            request.setAttribute("inputErrors", "Password did not match!");
+//            request.getRequestDispatcher("WEB-INF/edit_profile.jsp").forward(request, response);
+//            return;
+//        }
+
+//         check if user already exist in the users table
+//        User checkUsername = DaoFactory.getUsersDao().findByUsername(userData);
+//        if (checkUsername != null) {
+//            request.setAttribute("inputErrors", "Username already exist!");
+//            request.getRequestDispatcher("WEB-INF/edit_profile.jsp").forward(request, response);
+//            return;
+//        }
+
+        // check if email already exist in the users table
+//        User checkEmail = DaoFactory.getUsersDao().findByEmail(email);
+//        if (checkEmail != null) {
+//            request.setAttribute("inputErrors", "Email already exist!");
+//            request.getRequestDispatcher("WEB-INF/edit_profile.jsp").forward(request, response);
+//            return;
+//        }
+
+
+        User newUser = new User(1, first_name, last_name, email, Password.hash(password));
+        // insert the new user into the users table
+//        DaoFactory.getUsersDao().update(newUser);
+        System.out.println(newUser);
 
 
 
 
-
+        // create session with User object from the database
+        User editUser = DaoFactory.getUsersDao().findByUsername(userData.getUsername());
+        request.getSession().setAttribute("user", editUser);
+        // login to profile
+        response.sendRedirect("/profile");
 
     }// doPost
+
 }// class

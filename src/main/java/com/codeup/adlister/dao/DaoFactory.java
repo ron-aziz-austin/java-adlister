@@ -28,4 +28,5 @@ public class DaoFactory {
         return categoriesDao;
     }
 
+
 }// class

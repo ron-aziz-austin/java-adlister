@@ -81,7 +81,7 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <input type="button" class="btn btn-primary" value="Save Changes">
+                                <input type="submit" name="submit" class="btn btn-primary" value="submit">
                                 <span></span>
                                 <input type="reset" class="btn btn-default" onclick="cancelEditProfile()" value="Cancel">
                             </div>
