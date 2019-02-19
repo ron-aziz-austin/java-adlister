@@ -9,9 +9,19 @@ import java.io.IOException;
 
 @WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
+    }// doGet
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        Long category = Long.parseLong(request.getParameter("category"));
+        request.removeAttribute("ads");
+        request.setAttribute("ads", DaoFactory.getAdsDao().listByCategory(category));
+        request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
+        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
-}
+
+}// class
