@@ -34,21 +34,23 @@ public class CategoryDao implements Categories {
         }
     }
 
-    @Override
-    public Category findAdCategory(Long categoryId) {
-        String sql = "SELECT title FROM category JOIN ads ON ads.category_id = category.category_id WHERE ? = category.category_id";
-
-        try {
-            // preparedStatement object that represents an individual SQL statement
-            PreparedStatement stmt = connection.prepareStatement(sql);
-            // safely set values into the SQL query placeholder ? with the email
-            stmt.setLong(1, categoryId);
-            // execute select statement and returns instantiated User object
-            return extractCategory(stmt.executeQuery());
-        } catch (SQLException e) {
-            throw new RuntimeException("Error finding by email.", e);
-        }
-    }
+//    @Override
+//    public Category findAdCategory(Long categoryId) {
+//        String sql = "SELECT * FROM category WHERE ? = category.category_id";
+//
+//        try {
+//            // preparedStatement object that represents an individual SQL statement
+//            PreparedStatement stmt = connection.prepareStatement(sql);
+//            // safely set values into the SQL query placeholder ? with the email
+//            stmt.setLong(1, categoryId);
+//            // execute select statement and returns instantiated User object
+//            ResultSet rs = stmt.executeQuery();
+//            rs.next();
+//            return extractCategory(rs);
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error finding ad category.", e);
+//        }
+//    }
 
     private Category extractCategory(ResultSet rs) throws SQLException {
         return new Category(
