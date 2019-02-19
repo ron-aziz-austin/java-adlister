@@ -15,13 +15,13 @@
 
     <%--TODO fix this--%>
     <div class="container">
-        <h4>Title of ad goes here</h4>
+        <h4><c:out value="${ad.title}"/></h4>
             <p class="bottom_line">
                 <span>Ad ID:&nbsp;</span>
-                <span>5267512</span>
+                <span><c:out value="${ad.id}"/></span>
             </p>
         <div class="price">
-            <h5>$150.00</h5>
+            <h5><c:out value="${ad.price}"/></h5>
         </div>
         <div class="row">
             <div class="column">
@@ -32,26 +32,26 @@
             <div class="column ml-2">
                 <p class="entry_address">
                     <label class="adLabel">Location: </label>
-                    <span id="frontend_address" class="frontend_address">37 rue du Faubourg Montmartre 75009 Paris France</span>
+                    <span id="frontend_address" class="frontend_address"><c:out value="${ad.location}"/></span>
                 </p>
-                <p class="classified_county ">
-                    <label class="adLabel">Country:</label>
-                    <span>United States</span>
-                </p>
+                <%--<p class="classified_county ">--%>
+                    <%--<label class="adLabel">Country:</label>--%>
+                    <%--<span>United States</span>--%>
+                <%--</p>--%>
                 <p class="classified_city ">
-                    <label class="adLabel">City:</label>
-                    <span>New York, Philadelphia, San Francisco</span>
+                    <label class="adLabel">City: <c:out value="${ad.city}"/></label>
+                    <span><c:out value="${ad.city}"/></span>
                 </p>
                 <p class="zip_code">
                     <label class="adLabel">Zip Code: </label>
-                    <span class="frontend_zip_code">710618.6545</span>
+                    <span class="frontend_zip_code"><c:out value="${ad.zipCode}"/></span>
                 </p>
-                <p class="classified_tag">
-                    <label class="adLabel">Classified Status: </label>
-                    <span class="frontend_classified_tag">O.N.O</span>
-                </p>
+                <%--<p class="classified_tag">--%>
+                    <%--<label class="adLabel">Classified Status: </label>--%>
+                    <%--<span class="frontend_classified_tag"><c:out value="${ad.classifiedStatusId}"/></span>--%>
+                <%--</p>--%>
                 <p class="publish_date">
-                    <label class="adLabel">Listed On:</label>
+                    <label class="adLabel">Listed On: <c:out value="${ad.listedOn}"/></label>
                     <span>Feb 1</span>
                 </p>
                 <button class="contactButton">Contact Seller</button>
@@ -59,11 +59,7 @@
         </div>
         <div class="mt-2">
             <h3>Description</h3>
-            <p>Inflamarae funnunculus petrificus totalus unbreakable. Sonorus stupefy unction stupefy aparecium leviosa.
-                Conjunctivitis evanesco mortis tarantallegra quietus evanesco immobilus liberacorpus lacarnum. Leviosa
-                homorphus aresto charm evanesco immobilus quietus. Evanesca aguamenti aparecium patronum mobilicorpus
-                leviosa mobilicorpus.
-            </p>
+            <p><c:out value="${ad.description}"/></p>
         </div>
     </div>
 
