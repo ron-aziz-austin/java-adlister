@@ -1,15 +1,15 @@
 package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.dao.MySQLUsersDao;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static java.lang.System.*;
 
 @WebServlet(name = "controllers.EditProfileServlet", urlPatterns = "/profile/edit")
 public class EditProfileServlet extends HttpServlet {
@@ -25,13 +25,13 @@ public class EditProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//        // get user from session
+        // get user from session
         User userData = (User) request.getSession().getAttribute("user");
-//        // save user id
+        // save user id
         Long userId = userData.getId();
+        System.out.println(userId);
 
-
-
+        // get user inputs from html form
         String first_name = request.getParameter("first_name_edit");
         String last_name = request.getParameter("last_name_edit");
         String email = request.getParameter("email_edit");
@@ -40,6 +40,13 @@ public class EditProfileServlet extends HttpServlet {
         String passwordConfirmation = request.getParameter("confirm_password_edit");
 //        String username = request.getParameter("username_edit");
 //        boolean submit = request.getParameter("submit") != null;
+
+
+        User newUser = new User(userId, first_name, last_name, email, Password.hash(password));
+        // insert the new user into the users table
+        DaoFactory.getUsersDao().update(newUser);
+
+
 
 
 //        boolean inputHasErrors = email.isEmpty()
@@ -72,10 +79,6 @@ public class EditProfileServlet extends HttpServlet {
 //        }
 
 
-        User newUser = new User(1, first_name, last_name, email, Password.hash(password));
-        // insert the new user into the users table
-//        DaoFactory.getUsersDao().update(newUser);
-        System.out.println(newUser);
 
 
 
