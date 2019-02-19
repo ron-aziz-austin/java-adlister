@@ -40,6 +40,28 @@ public class User {
         this.first_name = first_name;
         this.last_name = last_name;
     }
+    public User(long id, String first_name, String last_name, String email, String password, String username) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.password = password;
+        this.email = email;
+        this.username = username;
+    }
+
+    public User(String first_name, String last_name, String username, String email, String password){
+        this.first_name= first_name;
+        this.last_name=last_name;
+        this.email=email;
+        this.password=password;
+    }
+
+    public User(long id, String first_name, String last_name, String email, String password){
+        this.first_name=first_name;
+        this.last_name=last_name;
+        this.email=email;
+        this.password=password;
+    }
 
     //---
 //    public User(String username, String email, String first_name, String last_name, String phone_number, String password, String website, String join_date, String posts, String user_bio, String user_fb, String user_twitter, String user_linkedin) {
