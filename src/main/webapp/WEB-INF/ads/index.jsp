@@ -144,23 +144,25 @@
         <form class="input-group" method="post" action="/ads">
             <div class="input-group">
                 <select class="custom-select" id="inputGroupSelect04" name="category">
+                    <option value="0">-- Category --</option>
                     <option value="1">Kids Products</option>
                     <option value="2">Entertainment</option>
                     <option value="3">Camera</option>
                     <option value="4">Computers & Laptops</option>
                     <option value="5">Fashion & Beauty</option>
                     <option value="6">Jobs</option>
+                    <option value="0">-- Sub Category --</option>
                     <option value="7">Clothes & Footwear</option>
                     <option value="8">Books</option>
                     <option value="9">Canon</option>
-                    <option value="9">Nikon</option>
-                    <option value="9">Sony</option>
-                    <option value="9">Laptop</option>
-                    <option value="9">Footwear</option>
-                    <option value="9">IT</option>
+                    <option value="10">Nikon</option>
+                    <option value="11">Sony</option>
+                    <option value="12">Laptop</option>
+                    <option value="13">Footwear</option>
+                    <option value="14">IT</option>
                 </select>
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                    <button class="btn btn-outline-secondary" type="submit">Button</button>
                 </div>
             </div>
         </form>
@@ -196,8 +198,7 @@
             </div>
         </c:forEach>
     <nav>
-        <ul class="pagination justify-content-center pagination-sm">
-        </ul>
+        <ul class="pagination justify-content-center pagination-sm"></ul>
     </nav>
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
