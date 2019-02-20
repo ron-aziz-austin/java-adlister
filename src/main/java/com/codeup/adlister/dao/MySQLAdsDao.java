@@ -35,12 +35,38 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> listByParentCategory(Long input) {
+        PreparedStatement stmt = null;
+        String sql = "SELECT * FROM ads JOIN category ON ads.category_id = category.category_id WHERE category.parent_id = ?";
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt.setLong(1, input);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+    @Override
     public List<Ad> listByCategory(Long input) {
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE category_id = ?");
             stmt.setLong(1, input);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
 
+    @Override
+    public List<Ad> listByTitle(String input) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE title LIKE ?");
+            stmt.setString(1, "%" + input + "%");
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
