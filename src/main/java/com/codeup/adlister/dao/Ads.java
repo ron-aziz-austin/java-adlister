@@ -8,5 +8,7 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     Ad findById(int id);
+    List<Ad> listByParentCategory(Long input);
     List<Ad> listByCategory(Long input);
+    List<Ad> listByTitle(String input);
 }
