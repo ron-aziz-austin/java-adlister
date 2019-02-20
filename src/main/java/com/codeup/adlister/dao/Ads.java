@@ -7,6 +7,7 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
+    void delete(Long adId);
     Ad findById(int id);
     List<Ad> listByParentCategory(Long input);
     List<Ad> listByCategory(Long input);

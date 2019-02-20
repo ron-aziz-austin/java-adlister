@@ -13,24 +13,21 @@ import java.io.IOException;
 public class CreateAdServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 3. Don't allow ad creation unless a user is logged in.
-//        TODO Uncomment
-//        if (request.getSession().getAttribute("user") == null) {
-//            response.sendRedirect("/login");
-//            return;
-//        }
+        // Don't allow ad creation unless a user is logged in.
+        if (request.getSession().getAttribute("user") == null) {
+            response.sendRedirect("/login");
+            return;
+        }
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
     }// doGet
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // 4. When a new ad is created, assign the user id of the logged in user to the ad.
-//        TODO Uncomment
-//        User userData = (User) request.getSession().getAttribute("user");
+        // When a new ad is created, assign the user id of the logged in user to the ad.
+        User userData = (User) request.getSession().getAttribute("user");
 
         System.out.println(Integer.parseInt(request.getParameter("zip_code")));
         Ad ad = new Ad(
-//            userData.getId(), TODO Uncomment
-                1, // TODO Remove Hardcoded Value
+            userData.getId(),
             Long.parseLong(request.getParameter("category")),
             request.getParameter("title"),
             request.getParameter("description"),

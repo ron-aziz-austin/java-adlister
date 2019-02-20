@@ -145,21 +145,29 @@
             <div class="input-group">
                 <select class="custom-select" id="inputGroupSelect04" name="category">
                     <option value="0">-- Category --</option>
-                    <option value="1">Kids Products</option>
-                    <option value="2">Entertainment</option>
+                    <option value="1">Arts & Crafts</option>
+                    <option value="2">Vehicles</option>
                     <option value="3">Camera</option>
-                    <option value="4">Computers & Laptops</option>
-                    <option value="5">Fashion & Beauty</option>
-                    <option value="6">Jobs</option>
+                    <option value="4">Fashion & Beauty</option>
+                    <option value="5">Books & hobbies</option>
+                    <option value="6">Electronics & Computers</option>
+                    <option value="7">Kids Furniture</option>
+                    <option value="8">Jobs</option>
+                    <option value="9">Kids & Baby Products</option>
+                    <option value="10">Mobiles & Tablets</option>
+                    <option value="11">Animals</option>
+                    <option value="12">Games</option>
+                    <option value="13">Marketing</option>
+                    <option value="14">Computers & Laptops</option>
                     <option value="0">-- Sub Category --</option>
-                    <option value="7">Clothes & Footwear</option>
-                    <option value="8">Books</option>
-                    <option value="9">Canon</option>
-                    <option value="10">Nikon</option>
-                    <option value="11">Sony</option>
-                    <option value="12">Laptop</option>
-                    <option value="13">Footwear</option>
-                    <option value="14">IT</option>
+                    <option value="15">Kids Clothes & Footwear</option>
+                    <option value="16">Books</option>
+                    <option value="17">Canon</option>
+                    <option value="18">Nikon</option>
+                    <option value="19">Sony</option>
+                    <option value="20">Laptop</option>
+                    <option value="21">Footwear</option>
+                    <option value="22">IT</option>
                 </select>
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="submit">Button</button>
