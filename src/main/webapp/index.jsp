@@ -8,7 +8,23 @@
 </head>
     <body>
         <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-        <jsp:include page="/WEB-INF/browseCategories.jsp"/>
+
+
+
+
+
+
+
+        <%--CONTENT GOES HERE--%>
+
+
+
+
+
+
+
+
+
         <jsp:include page="/WEB-INF/partials/footer.jsp" />
         <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
     </body>
