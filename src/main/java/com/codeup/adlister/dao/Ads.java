@@ -12,4 +12,5 @@ public interface Ads {
     List<Ad> listByParentCategory(Long input);
     List<Ad> listByCategory(Long input);
     List<Ad> listByTitle(String input);
+    List<Ad> listAdsByUserId(Long input);
 }
