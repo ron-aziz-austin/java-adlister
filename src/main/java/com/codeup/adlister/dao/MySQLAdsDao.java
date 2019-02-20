@@ -75,6 +75,20 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public Ad findById(int id) {
+        String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding an ad by id", e);
+        }
+    }
+
+    @Override
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, category_id, title, description, listed_on, location, city, zip_code, classified_status_id, price_type_id, price, image) VALUES (?,?,?,?,CURRENT_TIMESTAMP,?,?,?,1,?,?,'https://picsum.photos/200/300/?random')";
@@ -98,18 +112,16 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad findById(int id) {
-        String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
-        try {
-            PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setInt(1, id);
-            ResultSet rs = stmt.executeQuery();
-            rs.next();
-            return extractAd(rs);
-        } catch (SQLException e) {
-            throw new RuntimeException("Error finding an ad by id", e);
+    public void delete(Long adId) {
+        String sql = "DELETE FROM ads WHERE ads.id = ?";
+            try {
+                PreparedStatement stmt = connection.prepareStatement(sql);
+                stmt.setLong(1, adId);
+                stmt.executeUpdate();
+            } catch (SQLException e) {
+                throw new RuntimeException("Error deleting an ad.");
+            }
         }
-    }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
