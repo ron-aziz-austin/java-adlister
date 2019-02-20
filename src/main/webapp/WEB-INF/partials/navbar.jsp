@@ -29,7 +29,7 @@
     <div class="d-none d-sm-none d-md-block navbar-sec container">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link">Categories</a>
+                <a href="/categories" class="nav-link">Categories</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link">Classifieds</a>
