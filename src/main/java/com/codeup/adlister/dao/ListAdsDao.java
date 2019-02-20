@@ -14,6 +14,16 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> listByTitle(String input) {
+        return null;
+    }
+
+    @Override
+    public List<Ad> listByParentCategory(Long input) {
+        return null;
+    }
+
+    @Override
     public List<Ad> listByCategory(Long input) {
         return null;
     }
