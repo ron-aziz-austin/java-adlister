@@ -32,7 +32,7 @@
                 <a href="/categories" class="nav-link">Categories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">Classifieds</a>
+                <a href="/classifieds"  class="nav-link">Classifieds</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link">Contact Us</a>
