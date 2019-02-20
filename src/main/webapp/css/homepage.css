@@ -1,4 +1,10 @@
-ul {
+.home-header {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.07);
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+ul#home-category {
     list-style-type: none;
     padding: 0;
 }
@@ -21,18 +27,40 @@ ul {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-li a {
-    /*font-weight: 500;*/
-    padding: 20px 10px;
-    display: block;
-    width: 100%;
-    font-weight: 500;
-    font-size: 1em;
-    line-height: 1.2;
-}
-
-li a i {
+ul#home-category a i {
     display: block;
     font-size: 40px;
     margin-bottom: 10px;
+    text-align: center;
 }
+
+ul#home-category li a {
+    display: block;
+    text-align: center;
+}
+
+/*#home-category li a {*/
+    /*!*font-weight: 500;*!*/
+    /*padding: 20px 10px;*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*font-weight: 500;*/
+    /*font-size: 1em;*/
+    /*line-height: 1.2;*/
+/*}*/
+
+/*#home-category a {*/
+    /*!*font-weight: 500;*!*/
+    /*padding: 20px 10px;*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*font-weight: 500;*/
+    /*font-size: 1em;*/
+    /*line-height: 1.2;*/
+/*}*/
+
+/*#home-category li a i {*/
+    /*display: block;*/
+    /*font-size: 40px;*/
+    /*margin-bottom: 10px;*/
+/*}*/
