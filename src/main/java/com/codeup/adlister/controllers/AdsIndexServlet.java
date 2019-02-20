@@ -18,6 +18,7 @@ public class AdsIndexServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        // select ads by parent category or sub category
         if (request.getParameter("category") != null) {
             Long category = Long.parseLong(request.getParameter("category"));
             if (Long.parseLong(request.getParameter("category")) >= 1 && Long.parseLong(request.getParameter("category")) <=6) {
@@ -29,12 +30,12 @@ public class AdsIndexServlet extends HttpServlet {
             }
         }// if
 
+        // search by ad title
         if (request.getParameter("search") != null) {
-            String search = request.getParameter("search");
+            String title = request.getParameter("search");
             request.removeAttribute("ads");
-            request.setAttribute("ads", DaoFactory.getAdsDao().listByTitle(search));
+            request.setAttribute("ads", DaoFactory.getAdsDao().listByTitle(title));
         }// if
-
 
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
