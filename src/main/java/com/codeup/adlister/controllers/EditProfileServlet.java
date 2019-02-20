@@ -42,6 +42,17 @@ public class EditProfileServlet extends HttpServlet {
 //        boolean submit = request.getParameter("submit") != null;
 
 
+        // check if email already exist in the users table
+        User checkEmail = DaoFactory.getUsersDao().findByEmail(email);
+        System.out.println(checkEmail);
+        if (checkEmail != null) {
+            request.setAttribute("inputErrors", "Email already exist!");
+            request.getRequestDispatcher("/WEB-INF/edit_profile.jsp").forward(request, response);
+            return;
+        }
+        System.out.println("we got here");
+
+
         User newUser = new User(userId, first_name, last_name, email, Password.hash(password));
         // insert the new user into the users table
         DaoFactory.getUsersDao().update(newUser);
@@ -69,16 +80,6 @@ public class EditProfileServlet extends HttpServlet {
 //            request.getRequestDispatcher("WEB-INF/edit_profile.jsp").forward(request, response);
 //            return;
 //        }
-
-        // check if email already exist in the users table
-//        User checkEmail = DaoFactory.getUsersDao().findByEmail(email);
-//        if (checkEmail != null) {
-//            request.setAttribute("inputErrors", "Email already exist!");
-//            request.getRequestDispatcher("WEB-INF/edit_profile.jsp").forward(request, response);
-//            return;
-//        }
-
-
 
 
 

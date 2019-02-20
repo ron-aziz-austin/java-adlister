@@ -28,11 +28,16 @@
 
                 <!-- edit form column -->
                 <div class="col-md-9 personal-info">
-                    <div class="alert alert-info alert-dismissable">
+                    <c:if test="${inputErrors != null}">
+                    <div class="alert alert-danger alert-dismissable">
                         <a class="panel-close close" data-dismiss="alert">×</a>
-                        <i class="fa fa-coffee"></i>
-                       we dont really need this tbh its just here for the meantime.
+                        <i class="fa fa-times-circle"></i>
+                        <c:out value="${inputErrors}" />
                     </div>
+                    </c:if>
+                    <%--<h2 style="color:red;text-align:center">--%>
+                        <%--<c:out value="${inputErrors}" />--%>
+                    <%--</h2>--%>
                     <h3>Personal info</h3>
 
                     <form action="/profile/edit" method="post" class="form-horizontal" role="form">
