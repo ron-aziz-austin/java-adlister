@@ -11,9 +11,20 @@ import java.io.IOException;
 public class AdsIndexServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
+
+        // link from homepage
+        if (request.getParameter("homeCategory") != null) {
+            Long homeCategory = Long.parseLong(request.getParameter("homeCategory"));
+            request.removeAttribute("ads");
+            request.setAttribute("ads", DaoFactory.getAdsDao().listByParentCategory(homeCategory));
+        } else {
+            request.removeAttribute("ads");
+            request.setAttribute("ads", DaoFactory.getAdsDao().all());
+        }// if else
+
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
+
     }// doGet
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -39,6 +50,7 @@ public class AdsIndexServlet extends HttpServlet {
 
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
-    }
+
+    }// do Post
 
 }// class
