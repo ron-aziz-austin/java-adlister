@@ -1,14 +1,12 @@
 <div class="container">
-    <h3 style="text-align: center">Home Page Categories</h3>
+    <h3 class="home-header">Home Page Categories</h3>
 </div>
 <div class="container">
-    <ul class="row justify-content-md-center">
+    <ul id="home-category" class="row justify-content-md-center">
         <div class="card">
             <div class="card-body">
                 <li class="col-sm">
-                    <a href="/ads?homeCategory=1">
-                        <i class="fa fa-star-o"></i>Art &amp; Crafts
-                    </a>
+                    <a href="/ads?homeCategory=1"><i class="far fa-star"></i>Art &amp; Crafts</a>
                 </li>
             </div>
         </div>
@@ -64,14 +62,14 @@
         <div class="card">
             <div class="card-body">
                 <li id="menu-item-182" class="col-sm">
-                    <a href="/ads?homeCategory=9"><i class="fa fa-smile-o"></i>Kids &amp; Baby Products</a>
+                    <a href="/ads?homeCategory=9"><i class="far fa-smile"></i>Kids &amp; Baby Products</a>
                 </li>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
                 <li id="menu-item-183" class="col-sm">
-                    <a href="/ads?homeCategory=10"><i class="fa fa-mobile-phone"></i>Mobiles &amp; Tablets</a>
+                    <a href="/ads?homeCategory=10"><i class="fas fa-mobile-alt"></i>Mobiles &amp; Tablets</a>
                 </li>
             </div>
         </div>
