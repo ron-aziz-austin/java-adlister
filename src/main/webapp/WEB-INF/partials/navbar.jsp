@@ -43,9 +43,9 @@
             <li class="nav-item">
                 <a href="/ads" class="nav-link">List all Ads</a>
             </li>
-            <li class="nav-item">
+            <c:if test="${sessionScope.user != null}">
                 <a href="/ads/create" class="nav-link">Create Ad</a>
-            </li>
+            </c:if>
         </ul>
     </div>
     <div class="d-block d-sm-block d-md-none">
