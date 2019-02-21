@@ -71,8 +71,8 @@
                             <%--<c:out value="${ad.description}" />--%>
                             <%--</p>--%>
                         <p><c:out value="${categories[ii-1].title}"/> > <c:out value="${categories[i-1].title}"/> | By <c:out value="${sessionScope.user.username}"/></p>
-                        <p><span>Location:</span> <c:out value="${ad.location}"/> <c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
-                        <p><span><c:out value="${sessionScope.user.phone_number}"></c:out></span>   <span><c:out value="${sessionScope.user.email}"></c:out></span></p>
+                        <p><span>Location: </span> <c:out value="${ad.location}"/>, <c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
+                        <p><span>Phone: <c:out value="${sessionScope.user.phone_number}"></c:out></span> <span>Email: <c:out value="${sessionScope.user.email}"></c:out></span></p>
                     </div>
                     <div class="col-1">
                         <p>$${ad.price}</p>
