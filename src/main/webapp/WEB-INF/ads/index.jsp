@@ -170,7 +170,7 @@
                     <option value="22">IT</option>
                 </select>
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit">Button</button>
+                    <button class="btn btn-outline-secondary" id="searchButton" type="submit">Search</button>
                 </div>
             </div>
         </form>
@@ -191,7 +191,7 @@
                     </div>
                     <%--Ad Copy--%>
                     <div class="ad-copy col-8">
-                        <a href="/adIndex?adId=${ad.id}"><h5><c:out value="${ad.title}" /></h5></a>
+                        <a href="/adIndex?adId=${ad.id}"><h5 id="adTitle"><c:out value="${ad.title}" /></h5></a>
                             <%--<p>--%>
                             <%--<c:out value="${ad.description}" />--%>
                             <%--</p>--%>

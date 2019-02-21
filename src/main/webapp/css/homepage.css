@@ -19,12 +19,12 @@ ul#home-category {
 
 .card-body {
     padding-top: 3em;
-    background: #fafafa;
+    background-color: #4c4947;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 green;
 }
 
 ul#home-category a i {

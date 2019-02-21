@@ -15,13 +15,13 @@
 
     <%--TODO fix this--%>
     <div class="container">
-        <h4><c:out value="${ad.title}"/></h4>
+        <h4 id="individualAdTitle"><c:out value="${ad.title}"/></h4>
             <p class="bottom_line">
                 <span>Ad ID:&nbsp;</span>
                 <span><c:out value="${ad.id}"/></span>
             </p>
         <div class="price">
-            <h5><c:out value="${ad.price}"/></h5>
+            <h5 class="my-auto">$<c:out value="${ad.price}"/></h5>
         </div>
         <div class="row">
             <div class="column">
@@ -39,7 +39,7 @@
                     <%--<label class="adLabel">Country:</label>--%>
                     <%--<span>United States</span>--%>
                 <%--</p>--%>
-                <p class="classified_city ">
+                <p class="classified_city">
                     <label class="adLabel">City: <c:out value="${ad.city}"/></label>
                     <span><c:out value="${ad.city}"/></span>
                 </p>
