@@ -26,4 +26,8 @@ public class ViewProfileServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }// doGet
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+    }// doPost
+
 }// class

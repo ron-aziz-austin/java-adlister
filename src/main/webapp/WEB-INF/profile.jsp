@@ -23,7 +23,7 @@
                         <c:out value="${sessionScope.user.username}"/>
                         <%--TODO set attribute with user public info--%>
                         <c:if test="${sessionScope.user != null}">
-                            <button type="button" onclick="edit()" id="edit-profile" class="btn btn-primary btn-sm">Edit Profile</button>
+                            <button type="button" onclick="location.href='/profile/edit'" id="edit-profile" class="btn btn-primary btn-sm">Edit Profile</button>
                         </c:if>
                     </h2>
 
@@ -55,7 +55,9 @@
                 <c:set var="i" value="${ad.categoryId}"/>
                 <c:set var="ii" value="${categories[i-1].parentId}"/>
             <div class="mx-auto content">
-                <article style="border: 1px solid black" class="row">
+                <button type="button" onclick="location.href='/profile?adId=${ad.id}'" class="edit-ad btn btn-primary btn-sm">Edit</button>
+                <button type="button" onclick="location.href='/profile?adId=${ad.id}'" class="delete-ad btn btn-primary btn-sm">Delete</button>
+                <article style="border: 1px solid lightgray" class="row">
                         <%--Classified image--%>
                     <div class="square col-3">
                         <a href="#">
@@ -219,13 +221,6 @@
                     });
 
                 </script>
-    <script>
-        // redirects to edit profile page
-        //needs to be updated to a valid url eventually
-        function edit() {
-            location.href = "http://localhost:8080/profile/edit";
-        }
-    </script>
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </body>
