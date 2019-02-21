@@ -49,7 +49,7 @@ public class User {
         this.username = username;
     }
 
-    public User(String first_name, String last_name, String username, String email, String password){
+    public User(String first_name, String last_name, String email, String password){
         this.first_name= first_name;
         this.last_name=last_name;
         this.email=email;
@@ -69,6 +69,12 @@ public class User {
         this.first_name=first_name;
         this.last_name=last_name;
         this.password=password;
+    }
+
+    public User(String username, String phone_number, String email) {
+        this.username = username;
+        this.phone_number = phone_number;
+        this.email = email;
     }
 
     //---
