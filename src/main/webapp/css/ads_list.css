@@ -7,6 +7,26 @@ article {
     margin-bottom: 30px;
 }
 
+div.content {
+    position: relative;
+}
+
+.delete-ad {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 80px;
+    z-index: 10;
+}
+
+.edit-ad {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 80px;
+    z-index: 10;
+}
+
 .ad-copy {
     float: left;
     /*width: 100%;*/
