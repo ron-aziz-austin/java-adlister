@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    phone_number VARCHAR(10) NOT NULL,
+    phone_number VARCHAR(14) NOT NULL,
 #     join_date DATE DEFAULT CURRENT_DATE(),
 #     posts INT UNSIGNED NOT NULL,
 #     website VARCHAR(255),

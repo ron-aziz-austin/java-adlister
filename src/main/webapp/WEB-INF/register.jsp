@@ -32,7 +32,7 @@
             <%--phone number--%>
                 <div class="form-group">
                     <label for="phone_number">Phone Number</label>
-                    <input id="phone_number" name="phone_number" class="form-control" type="text" required>
+                    <input id="phone_number" name="phone_number" class="form-control" type="tel" required>
                 </div>
             <%--Username--%>
             <div class="form-group">
@@ -81,6 +81,12 @@
             <input type="submit" class="btn btn-block btn-primary" value="Register">
         </form>
     </div>
+    <script>
+        document.getElementById('phone_number').addEventListener('input', function (e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+    </script>
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </body>
