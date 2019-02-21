@@ -74,6 +74,7 @@
         </div>
         <%--jumbo 2 end--%>
 
+
         <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
             <script type="text/javascript">
 
