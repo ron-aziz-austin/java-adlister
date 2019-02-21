@@ -12,12 +12,24 @@
     <div class="container-fluid">
         <h2>Browse Categories</h2>
         <section class="category_list_wrap row">
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header"><h3>
                     <a href="#" title="Animals">Animals</a>
                 </h3></div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-0"><a href="#" >Cats</a>
+                    <li class="list-group-item py-0"><a href="#">Dogs</a>
+                    </li>
+                    <li class="list-group-item py-0"><a href="#">Amphibians</a>
+                    </li>
+                    <li class="list-group-item py-0"><a href="#">Birds</a>
+                    </li>
+                    <li class="list-group-item py-0"><a href="#">Abstract</a>
+                    </li>
+                </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
 
                 <div class="card-header">
                     <h3><a href="#" title="Art &amp; Crafts">Art &amp; Crafts</a></h3>
@@ -40,7 +52,7 @@
                 </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#" title="Books &amp; Hobbies">Books &amp; Hobbies</a>
@@ -48,7 +60,7 @@
                 </div>
 
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                    <li class="list-group-item py-0">
                         <a href="#">Magazines</a>
                     </li>
                     <li class="list-group-item py-0">
@@ -59,14 +71,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#" title="Cameras">Cameras</a>
                     </h3>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                    <li class="list-group-item py-0">
                         <a href="#">Canon</a>
                     </li>
                     <li class="list-group-item py-0">
@@ -83,7 +95,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#">Electronics &amp; Computers</a>
@@ -104,15 +116,15 @@
                     </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#" title="Entertainment">Entertainment</a>
                     </h3>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <a href="#" class="py-0">Books</a>
+                    <li class="list-group-item py-0">
+                        <a href="#">Books</a>
                     </li>
                     <li class="list-group-item py-0">
                         <a href="#">Games</a>
@@ -128,14 +140,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#" title="Jobs">Jobs</a>
                     </h3>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                    <li class="list-group-item py-0">
                         <a href="#">Customer Service</a>
                     </li>
                     <li class="list-group-item py-0">
@@ -152,7 +164,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#" title="Kids &amp; Baby Products">Kids &amp; Baby Products</a>
@@ -171,7 +183,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#" title="Mobiles &amp; Tablets">Mobiles &amp; Tablets</a>
@@ -189,7 +201,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; height: 32rem">
+            <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
                 <div class="card-header">
                     <h3>
                         <a href="#" title="Vehicles">Vehicles</a>
