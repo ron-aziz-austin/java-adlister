@@ -26,4 +26,9 @@ VALUES (0, 'Arts & Crafts'),
        (3, 'Sony'),
        (6, 'Laptop'),
        (4, 'Footwear'),
-       (8, 'IT');
+       (8, 'IT'),
+       (1, 'Drawing Supplies'),
+       (1, 'Painting Supplies'),
+       (2, 'Electric Scooter'),
+       (2, 'Electric Bicycles')
+       ;

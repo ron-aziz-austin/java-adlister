@@ -26,7 +26,8 @@
         <div class="row">
             <div class="column">
                 <div id = "main_image">
-                    <img src="https://www.fillmurray.com/300/200">
+                    <%--TODO added temporary inline style--%>
+                    <img style="width: 300px;height: auto" src="${ad.image}">
                 </div>
             </div>
             <div class="column ml-2">

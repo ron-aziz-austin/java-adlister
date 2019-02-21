@@ -5,7 +5,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
-    <link href="${pageContext.request.contextPath}/css/ads_index.css" type="text/css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/css/ads_list.css" type="text/css" rel="stylesheet" />
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
