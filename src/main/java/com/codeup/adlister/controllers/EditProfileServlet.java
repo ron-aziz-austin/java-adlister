@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static java.lang.System.*;
-
 @WebServlet(name = "controllers.EditProfileServlet", urlPatterns = "/profile/edit")
 public class EditProfileServlet extends HttpServlet {
 
@@ -29,7 +27,6 @@ public class EditProfileServlet extends HttpServlet {
         User userData = (User) request.getSession().getAttribute("user");
         // save user id
         Long userId = userData.getId();
-        System.out.println(userId);
 
         // get user inputs from html form
         String first_name = request.getParameter("first_name_edit");
