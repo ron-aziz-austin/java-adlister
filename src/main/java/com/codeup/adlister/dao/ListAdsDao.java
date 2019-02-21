@@ -14,6 +14,11 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
+    public void edit(Ad ad) {
+
+    }
+
+    @Override
     public void delete(Long adId) {
 
     }
