@@ -17,10 +17,22 @@
                     <a href="/logout">Logout</a>
                 </c:when>
                 <c:otherwise>
-                    <a href="/register">Register</a>
-                    <a href="/login">Login</a>
+                    <button id="nav_register_user" type="button" class="btn btn-link">Register</button>
+                    <button id="nav_returning_user" type="button" class="btn btn-link">Login</button>
                 </c:otherwise>
             </c:choose>
+
+
+            <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
+            <script type="text/javascript">
+                $("#nav_register_user").click(function(){
+                    location.href = "http://localhost:8080/register";
+                });
+                $("#nav_returning_user").click(function(){
+                    location.href = "http://localhost:8080/login";
+                });
+
+            </script>
         </div>
     </div>
 </nav>
