@@ -7,6 +7,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
+    <link href="${pageContext.request.contextPath}/css/ads_list.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -18,7 +19,12 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h2 class="card-title"><c:out value="${sessionScope.user.username}"/> <button type="button" onclick="edit()" id="edit-profile" class="btn btn-primary btn-sm">Edit Profile</button>
+                    <h2 class="card-title">
+                        <c:out value="${sessionScope.user.username}"/>
+                        <%--TODO set attribute with user public info--%>
+                        <c:if test="${sessionScope.user != null}">
+                            <button type="button" onclick="edit()" id="edit-profile" class="btn btn-primary btn-sm">Edit Profile</button>
+                        </c:if>
                     </h2>
 
                     <p class="card-text">
@@ -85,7 +91,8 @@
                 <script
                         src="https://code.jquery.com/jquery-3.3.1.min.js"
                         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                        crossorigin="anonymous"></script>
+                        crossorigin="anonymous">
+                </script>
                 <script>
                     // Returns an array of maxLength (or less) page numbers
                     // where a 0 in the returned array denotes a gap in the series.
