@@ -43,6 +43,19 @@ public class Ad {
         this.price = price;
     }
 
+    public Ad(long id,long userId, long categoryId, String title, String description, String location, String city, int zipCode, int priceTypeId, double price) {
+        this.id = id;
+        this.userId = userId;
+        this.categoryId = categoryId;
+        this.title = title;
+        this.description = description;
+        this.location = location;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.priceTypeId = priceTypeId;
+        this.price = price;
+    }
+
     public long getCategoryId() {
         return categoryId;
     }
