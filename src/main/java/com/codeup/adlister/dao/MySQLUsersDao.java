@@ -89,7 +89,7 @@ public class MySQLUsersDao implements Users {
     public void update(User user) {
         String query = "UPDATE users SET first_name=?, last_name=?, email=?, password=? WHERE id=?";
         try {
-            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, user.getFirst_name());
             stmt.setString(2, user.getLast_name());
 //            stmt.setString(3, user.getUsername());
@@ -101,6 +101,22 @@ public class MySQLUsersDao implements Users {
 //            ResultSet rs = stmt.getGeneratedKeys();
 //            rs.next();
 //            return rs.getLong(1);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+        }
+    }
+
+    @Override
+    public void updateWithSameEmail(User user) {
+        String query = "UPDATE users SET first_name=?, last_name=?, password=? WHERE id=?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, user.getFirst_name());
+            stmt.setString(2, user.getLast_name());
+            stmt.setString(3, user.getPassword());
+            stmt.setLong(4, user.getId());
+//            stmt.setString(6, user.getPhone_number());
+            stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
         }

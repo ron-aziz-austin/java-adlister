@@ -44,7 +44,7 @@
                         <div class="form-group">
                             <label for="first_name_edit" class="col-lg-3 control-label">First name:</label>
                             <div class="col-lg-8">
-                                <input name="first_name_edit" id="first_name_edit" class="form-control" type="text" value=<c:out value="${sessionScope.user.first_name}"/>
+                                <input name="first_name_edit" id="first_name_edit" class="form-control" type="text" value= "<c:out value="${sessionScope.user.first_name}"/>">
                             </div>
                         </div>
                         <div class="form-group">

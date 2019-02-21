@@ -50,6 +50,8 @@ public class ListAdsDao implements Ads {
         return ad.getId();
     }
 
+
+
 //    private List<Ad> generateAds() {
 //        List<Ad> ads = new ArrayList<>();
 //        ads.add(new Ad(
