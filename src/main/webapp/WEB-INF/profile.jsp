@@ -55,8 +55,8 @@
                 <c:set var="i" value="${ad.categoryId}"/>
                 <c:set var="ii" value="${categories[i-1].parentId}"/>
             <div class="mx-auto content">
-                <button type="button" onclick="location.href='/profile?adId=${ad.id}'" class="edit-ad btn btn-primary btn-sm">Edit</button>
-                <button type="button" onclick="location.href='/profile?adId=${ad.id}'" class="delete-ad btn btn-primary btn-sm">Delete</button>
+                <button type="button" onclick="location.href='/ads/edit?adId=${ad.id}'" class="edit-ad btn btn-primary btn-sm">Edit</button>
+                <button type="button" onclick="location.href='/profile?deleteAd=${ad.id}'" class="delete-ad btn btn-primary btn-sm">Delete</button>
                 <article style="border: 1px solid lightgray" class="row">
                         <%--Classified image--%>
                     <div class="square col-3">
