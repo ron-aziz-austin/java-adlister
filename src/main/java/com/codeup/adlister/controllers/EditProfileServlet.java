@@ -43,27 +43,28 @@ public class EditProfileServlet extends HttpServlet {
 
 
         // check if email already exist in the users table
-
+        // checks for blank email field
+        // ignores unique if email is not adjusted
         if (email.equals("")) {
             request.setAttribute("inputErrors", "No email inputed!");
             request.getRequestDispatcher("/WEB-INF/edit_profile.jsp").forward(request, response);
             return;
-        }
-//        } else if (email.equals(userData.getEmail())){
-//
-//            System.out.println(first_name);
-//
-//            User updateUserWithEmail = new User(userId, first_name, last_name, password);
-//            DaoFactory.getUsersDao().updateWithSameEmail(updateUserWithEmail);
-//        } else {
-//            User checkEmail = DaoFactory.getUsersDao().findByEmail(email);
-//            if (checkEmail != null) {
-//                request.setAttribute("inputErrors", "Email already exist!");
-//                request.getRequestDispatcher("/WEB-INF/edit_profile.jsp").forward(request, response);
-//                return;
-//            }
+        } else if (email.equals(userData.getEmail())){
 
-//        }
+            System.out.println(first_name);
+
+            User updateUserWithEmail = new User(userId, first_name, last_name, password);
+            DaoFactory.getUsersDao().updateWithSameEmail(updateUserWithEmail);
+        }
+        else {
+            User checkEmail = DaoFactory.getUsersDao().findByEmail(email);
+            if (checkEmail != null) {
+                request.setAttribute("inputErrors", "Email already exist!");
+                request.getRequestDispatcher("/WEB-INF/edit_profile.jsp").forward(request, response);
+                return;
+            }
+
+        }
 
 
         User updateUser = new User(userId, first_name, last_name, email, Password.hash(password));
