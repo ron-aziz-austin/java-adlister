@@ -126,6 +126,27 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public void edit(Ad ad) {
+        String query = "UPDATE ads SET user_id=?, category_id=?, title=?, description=?, listed_on=CURRENT_TIMESTAMP, location=?, city=?, zip_code=?, classified_status_id=1, price_type_id=?, price=?, image='https://picsum.photos/200/300/?random' WHERE id=?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, ad.getUserId());
+            stmt.setLong(2, ad.getCategoryId());
+            stmt.setString(3, ad.getTitle());
+            stmt.setString(4, ad.getDescription());
+            stmt.setString(5, ad.getLocation());
+            stmt.setString(6, ad.getCity());
+            stmt.setInt(7, ad.getZipCode());
+            stmt.setInt(8, ad.getPriceTypeId());
+            stmt.setDouble(9, ad.getPrice());
+            stmt.setLong(10, ad.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error editing an ad", e);
+        }
+    }
+
+    @Override
     public void delete(Long adId) {
         String sql = "DELETE FROM ads WHERE ads.id = ?";
             try {
