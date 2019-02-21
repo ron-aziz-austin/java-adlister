@@ -13,14 +13,18 @@
             <div class="form-group">
                 <label for="category">Category</label>
                 <select class="form-control" id="category" name="category">
-                    <option value="7">Kids Products: Clothes & Footwear</option>
-                    <option value="8">Entertainment: Books</option>
-                    <option value="9">Camera: Canon</option>
-                    <option value="10">Camera: Nikon</option>
-                    <option value="11">Camera: Sony</option>
-                    <option value="12">Computers & Laptops: Laptop</option>
-                    <option value="13">Fashion & Beauty: Footwear</option>
-                    <option value="14">Jobs: IT</option>
+                    <option value="15">Kids & Baby Products: Kids Clothes & Footwear</option>
+                    <option value="16">Books & Hobbies: Books</option>
+                    <option value="17">Camera: Canon</option>
+                    <option value="18">Camera: Nikon</option>
+                    <option value="19">Camera: Sony</option>
+                    <option value="20">Electronics & Computers: Laptop</option>
+                    <option value="21">Fashion & Beauty: Footwear</option>
+                    <option value="22">Jobs: IT</option>
+                    <option value="23">Arts & Crafts: Drawing Supplies</option>
+                    <option value="24">Arts & Crafts: Painting Supplies</option>
+                    <option value="25">Vehicles: Electric Scooter</option>
+                    <option value="26">Vehicles: Electric Bicycles</option>
                 </select>
             </div>
             <div class="form-group">
