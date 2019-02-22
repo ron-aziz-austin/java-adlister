@@ -5,12 +5,12 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
-    <link href="${pageContext.request.contextPath}/css/homepage.css" type="text/css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/css/categories.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h3 class="home-header">Home Page Categories</h3>
+        <h3 class="home-header">Main Categories</h3>
     </div>
     <div class="container">
         <ul id="home-category" class="row justify-content-md-center">
