@@ -97,10 +97,6 @@ body{
     color: #53a451;
 }
 
-#pleaseLogIn{
-    color: #53a451;
-}
-
 #logInButton{
     background-color: #53a451;
 }
@@ -149,4 +145,10 @@ body{
 
 .adLabel{
     color: #53a451;
+}
+.f-color-g {
+    color: #53a451;
+}
+.f-color {
+    color: #efedef;
 }
