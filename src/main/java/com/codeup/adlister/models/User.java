@@ -71,13 +71,13 @@ public class User {
         this.password=password;
     }
 
-    public User(String username, String phone_number, String email) {
+    public User(String username, long id, String phone_number, String email) {
         this.username = username;
+        this.id = id;
         this.phone_number = phone_number;
         this.email = email;
     }
 
-    //---
 //    public User(String username, String email, String first_name, String last_name, String phone_number, String password, String website, String join_date, String posts, String user_bio, String user_fb, String user_twitter, String user_linkedin) {
 //        this.first_name = first_name;
 //        this.last_name = last_name;
@@ -93,23 +93,6 @@ public class User {
 //        this.user_twitter = user_twitter;
 //        this.user_linkedin = user_linkedin;
 //
-//    }
-    //---
-
-//    public User(String username1, String s, String hash, String username, String email, String password) {
-//        this.username = username;
-//        this.email = email;
-//        this.password = password;
-//    }
-
-    // HAD TO COMMENT BELOW CONSTRUCTOR FOR EDIT PROFILE SERVLET
-    // WAS NOT ABLE TO USE CONSTRUCTOR ON LINE 67
-
-//    public User(long id, String username, String email, String password) {
-//        this.id = id;
-//        this.username = username;
-//        this.email = email;
-//        this.password = password;
 //    }
 
     public long getId() {
