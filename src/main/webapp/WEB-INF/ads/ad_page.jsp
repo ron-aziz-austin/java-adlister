@@ -5,14 +5,11 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
-    <link href="${pageContext.request.contextPath}/css/homepage.css" type="text/css" rel="stylesheet" />
+    <%--<link href="${pageContext.request.contextPath}/css/categories.css" type="text/css" rel="stylesheet" />--%>
     <link href="${pageContext.request.contextPath}/css/ad_page.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
-    <%--===================================================--%>
-
     <%--TODO fix this--%>
     <div class="container">
         <h4 id="individualAdTitle"><c:out value="${ad.title}"/></h4>
@@ -35,10 +32,6 @@
                     <label class="adLabel">Location: </label>
                     <span id="frontend_address" class="frontend_address"><c:out value="${ad.location}"/></span>
                 </p>
-                <%--<p class="classified_county ">--%>
-                    <%--<label class="adLabel">Country:</label>--%>
-                    <%--<span>United States</span>--%>
-                <%--</p>--%>
                 <p class="classified_city">
                     <label class="adLabel">City: <c:out value="${ad.city}"/></label>
                     <span><c:out value="${ad.city}"/></span>
@@ -47,10 +40,6 @@
                     <label class="adLabel">Zip Code: </label>
                     <span class="frontend_zip_code"><c:out value="${ad.zipCode}"/></span>
                 </p>
-                <%--<p class="classified_tag">--%>
-                    <%--<label class="adLabel">Classified Status: </label>--%>
-                    <%--<span class="frontend_classified_tag"><c:out value="${ad.classifiedStatusId}"/></span>--%>
-                <%--</p>--%>
                 <p class="publish_date">
                     <label class="adLabel">Listed On: <c:out value="${ad.listedOn}"/></label>
                     <span>Feb 1</span>
@@ -63,12 +52,6 @@
             <p><c:out value="${ad.description}"/></p>
         </div>
     </div>
-
-
-
-
-
-
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2>
@@ -79,11 +62,6 @@
             </p>
         </div>
     </c:forEach>
-
-
-
-
-    <%--===================================================--%>
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
 </body>
