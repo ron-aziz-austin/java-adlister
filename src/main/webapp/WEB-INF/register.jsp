@@ -9,9 +9,13 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h2 style="color:red;text-align:center">
-            <c:out value="${inputErrors}" />
-        </h2>
+        <c:if test="${inputErrors != null}">
+            <div class="alert alert-danger alert-dismissable">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <i class="fa fa-times-circle"></i>
+                <c:out value="${inputErrors}" />
+            </div>
+        </c:if>
         <h3 class="f-color-g main-header">User Registration Form</h3>
     </div>
     <div class="container">

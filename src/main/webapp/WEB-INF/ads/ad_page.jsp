@@ -12,12 +12,12 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h4 class="f-color-g"><c:out value="${ad.title}"/></h4>
-            <p class="bottom_line f-color">
+            <p class="bottom_line f-color ml-3">
                 <span>Ad ID:&nbsp;</span>
                 <span><c:out value="${ad.id}"/></span>
             </p>
-        <div class="price mb-3">
-            <h5 class="my-auto">$<c:out value="${ad.price}"/></h5>
+        <div class="price mb-3 ml-0 f-color">
+            <h5 class="ml-0">$<c:out value="${ad.price}"/></h5>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12 p-0">
@@ -27,8 +27,8 @@
             </div>
             <div class="col-lg-4 col-md-3 col-sm-6 align-self-center p-0">
                 <p class="entry_address"><c:out value="${ad.location}"/></p>
-                <p class="classified_city"><c:out value="${ad.city}"/></p>
-                <p class="zip_code"><c:out value="${ad.zipCode}"/></p>
+                <p class="classified_city zip_code"><c:out value="${ad.city}"/>, TX <c:out value="${ad.zipCode}"/></p>
+                <p class=""></p>
                 <p class="publish_date">Listed On: <c:out value="${ad.listedOn}"/></p>
             </div>
             <div class="col-lg-4 col-md-3 col-sm-6 align-self-center p-0">

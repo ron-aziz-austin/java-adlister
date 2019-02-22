@@ -11,7 +11,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <body>
         <div class="container">
-            <h1>Edit Profile
+            <h1 class="f-color-g">Edit Profile
                 <c:out value="${sessionScope.user.username}"/>
             </h1>
             <hr>
@@ -21,7 +21,7 @@
                     <div class="text-center">
                         <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
                         <h6 class="f-color">Upload a different photo...</h6>
-                        <input type="file" class="form-control btn btn-success">
+                        <input type="file" class="form-control btn mx-auto">
                     </div>
                 </div>
 
