@@ -181,6 +181,13 @@
         <c:forEach var="ad" items="${ads}">
             <c:set var="i" value="${ad.categoryId}"/>
             <c:set var="ii" value="${categories[i-1].parentId}"/>
+            <c:forEach var="user" items="${usersPublicInfo}">
+                <c:if test = "${user != null && user.id == ad.userId}">
+                    <c:set var="username" value="${user.username}"/>
+                    <c:set var="phone" value="${user.phone_number}"/>
+                    <c:set var="email" value="${user.email}"/>
+                </c:if>
+            </c:forEach>
             <div class="mx-auto content">
                 <article style="border: 1px solid black" class="row">
                     <%--Classified image--%>
@@ -192,12 +199,9 @@
                     <%--Ad Copy--%>
                     <div class="ad-copy col-8">
                         <a href="/adIndex?adId=${ad.id}"><h5><c:out value="${ad.title}" /></h5></a>
-                            <%--<p>--%>
-                            <%--<c:out value="${ad.description}" />--%>
-                            <%--</p>--%>
-                        <p><c:out value="${categories[ii-1].title}"/> > <c:out value="${categories[i-1].title}"/> | By <c:out value="${ad.userId}"/></p>
-                        <p><span>Location:</span> <c:out value="${ad.location}"/> <c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
-                        <p><span>Phone: (123) 456-7890</span>   <span>Email: contact@email.com</span></p>
+                        <p><c:out value="${categories[ii-1].title}"/> > <c:out value="${categories[i-1].title}"/> | By <c:out value="${username}"/></p>
+                        <p><span>Location:</span> <c:out value="${ad.location}"/>, <c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
+                        <p><span class="pr-4">Phone: <c:out value="${phone}"/></span>   <span>Email: <c:out value="${email}"/></span></p>
                     </div>
                     <div class="col-1">
                         <p>$${ad.price}</p>
