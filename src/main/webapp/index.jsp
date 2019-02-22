@@ -8,7 +8,7 @@
 
     <style>
         .jumbotron-billboard .img {
-            margin-bottom: 0px;
+            margin-bottom: 0;
             opacity: 0.2;
             color: #fff;
             background: #000 url("https://bootstrapcreative.com/wp-bc/wp-content/uploads/2017/03/learning-story.png") top center no-repeat;
@@ -21,7 +21,9 @@
             left:0;
             z-index:1;
         }
-        .jumbotron h2 {margin-top:0;}
+        .jumbotron h2 {
+            margin-top:0;
+        }
         .jumbotron {
             position:relative;
             padding-top:50px;
@@ -31,7 +33,12 @@
             position:relative;
             z-index:2;
         }
-
+        div.b-color {
+            background-color: transparent;
+        }
+        .f-size {
+            font-size: 1.3em;
+        }
         @media screen and (max-width: 768px) {
             .jumbotron {
                 padding-top:20px;
@@ -44,17 +51,13 @@
         <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
         <%--begin--%>
-
-
-
-
             <div class="jumbotron jumbotron-billboard text-center">
                 <div class="img"></div>
                 <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-12">
+                    <div class="b-color row">
+                        <div class="col-lg-12 p-3">
                             <h2>Name TBD</h2>
-                            <p class="card-text text-center">
+                            <p class="f-size card-text text-center">
                                 XXX adlister is the most popular adliter in the San Antonio area since it's creation in 2019. Thousands of users create and sell products every single day. Registering for an account is simple and straightforward. Join the thousands of users who already enjoy xxx adlister and start selling and buying today!</p>
                             <hr class="my-4">
 
