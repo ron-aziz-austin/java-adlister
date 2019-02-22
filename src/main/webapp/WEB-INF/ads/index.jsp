@@ -38,6 +38,10 @@
                     <option value="20">Laptop</option>
                     <option value="21">Footwear</option>
                     <option value="22">IT</option>
+                    <option value="23">Drawing Supplies</option>
+                    <option value="24">Painting Supplies</option>
+                    <option value="25">Electric Scooter</option>
+                    <option value="26">Electric Bicycles</option>
                 </select>
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" id="searchButton" type="submit">Search</button>
