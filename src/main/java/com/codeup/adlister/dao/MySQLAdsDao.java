@@ -105,7 +105,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, category_id, title, description, listed_on, location, city, zip_code, classified_status_id, price_type_id, price, image) VALUES (?,?,?,?,CURRENT_TIMESTAMP,?,?,?,1,?,?,'https://picsum.photos/200/300/?random')";
+            String insertQuery = "INSERT INTO ads(user_id, category_id, title, description, listed_on, location, city, zip_code, classified_status_id, price_type_id, price, image) VALUES (?,?,?,?,CURRENT_TIMESTAMP,?,?,?,1,?,?,'http://loremflickr.com/320/240/dog')";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setLong(2, ad.getCategoryId());
@@ -127,7 +127,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void edit(Ad ad) {
-        String query = "UPDATE ads SET user_id=?, category_id=?, title=?, description=?, listed_on=CURRENT_TIMESTAMP, location=?, city=?, zip_code=?, classified_status_id=1, price_type_id=?, price=?, image='https://picsum.photos/200/300/?random' WHERE id=?";
+        String query = "UPDATE ads SET user_id=?, category_id=?, title=?, description=?, listed_on=CURRENT_TIMESTAMP, location=?, city=?, zip_code=?, classified_status_id=1, price_type_id=?, price=?, image='http://loremflickr.com/320/240/dog' WHERE id=?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setLong(1, ad.getUserId());
