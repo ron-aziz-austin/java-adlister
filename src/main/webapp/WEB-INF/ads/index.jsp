@@ -50,7 +50,6 @@
         </form>
     </div>
 
-    <%--<h1 style="text-align: center">Here Are all the ads!</h1>--%>
     <div class="container" id="jar">
         <c:forEach var="ad" items="${ads}">
             <c:set var="i" value="${ad.categoryId}"/>
@@ -73,7 +72,7 @@
                     <%--Ad Copy--%>
                     <div class="ad-copy col-8">
                         <a href="/adIndex?adId=${ad.id}"><h5 id="adTitle"><c:out value="${ad.title}" /></h5></a>
-                        <p><c:out value="${categories[ii-1].title}"/> > <c:out value="${categories[i-1].title}"/> | By <c:out value="${ad.userId}"/></p>
+                        <p><c:out value="${categories[ii-1].title}"/> > <c:out value="${categories[i-1].title}"/> | By <c:out value="${username}"/></p>
                         <p><span>Location:</span> <c:out value="${ad.location}"/> <c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
                         <p><span class="pr-4">Phone: <c:out value="${phone}"/></span>   <span>Email: <c:out value="${email}"/></span></p>
                     </div>
