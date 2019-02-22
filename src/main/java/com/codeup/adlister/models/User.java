@@ -8,6 +8,7 @@ public class User {
     private String email;
     private String password;
     private String phone_number;
+    private String image;
 //    private String website;
 //    private String join_date;
 //    private String posts;
@@ -16,7 +17,7 @@ public class User {
 //    private String user_twitter;
 //    private String user_linkedin;
 
-    public User(long id, String first_name, String last_name, String username, String email, String password, String phone_number) {
+    public User(long id, String first_name, String last_name, String username, String email, String password, String phone_number, String image) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -24,6 +25,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.phone_number = phone_number;
+        this.image = image;
     }
 
     public User(String first_name, String last_name, String username, String email, String password, String phone_number) {
@@ -138,5 +140,13 @@ public class User {
     public String getPhone_number() { return phone_number; }
 
     public void setPhone_number(String phone_number) { this.phone_number = phone_number; }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
 }//class

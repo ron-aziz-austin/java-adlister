@@ -15,7 +15,7 @@
         <div class="card mb-3">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="https://propertymarketersllc.com/wp-content/uploads/2018/05/profile-picture-placeholder.png" class="card-img rounded img-thumbnail" alt="...">
+                    <img src="<c:out value="${sessionScope.user.image}" />" class="card-img rounded img-thumbnail" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
