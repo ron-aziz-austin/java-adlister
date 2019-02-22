@@ -17,7 +17,7 @@
                 <span>Ad ID:&nbsp;</span>
                 <span><c:out value="${ad.id}"/></span>
             </p>
-        <div class="price">
+        <div class="price mb-3">
             <h5 class="my-auto">$<c:out value="${ad.price}"/></h5>
         </div>
         <div class="row">
