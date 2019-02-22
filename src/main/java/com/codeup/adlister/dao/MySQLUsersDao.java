@@ -3,6 +3,8 @@ import com.codeup.adlister.models.Config;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MySQLUsersDao implements Users {
     private Connection connection;
@@ -20,6 +22,17 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public List<User> usersPublicInfo() {
+        String sql = "SELECT username, id, phone_number, email FROM users";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            return createUsersFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding users public info.", e);
+        }
+    }
 
     @Override
     public User findByUsername(String username) {
@@ -69,8 +82,6 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-
-
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
@@ -85,6 +96,16 @@ public class MySQLUsersDao implements Users {
             rs.getString("phone_number")
         );
     }
+
+    private User extractUsersPublicInfo(ResultSet rs) throws SQLException {
+        return new User(
+                rs.getString("username"),
+                rs.getLong("id"),
+                rs.getString("phone_number"),
+                rs.getString("email")
+        );
+    }
+
     @Override
     public void update(User user) {
         String query = "UPDATE users SET first_name=?, last_name=?, email=?, password=? WHERE id=?";
@@ -98,9 +119,6 @@ public class MySQLUsersDao implements Users {
             stmt.setLong(5, user.getId());
 //            stmt.setString(6, user.getPhone_number());
             stmt.executeUpdate();
-//            ResultSet rs = stmt.getGeneratedKeys();
-//            rs.next();
-//            return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
         }
@@ -122,4 +140,12 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-}
+    private List<User> createUsersFromResults(ResultSet rs) throws SQLException {
+        List<User> users = new ArrayList<>();
+        while (rs.next()) {
+            users.add(extractUsersPublicInfo(rs));
+        }
+        return users;
+    }
+
+}// class
