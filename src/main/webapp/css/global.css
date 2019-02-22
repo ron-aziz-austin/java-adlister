@@ -1,0 +1,151 @@
+body{
+    background-color: #222022;
+    color: #222022;
+}
+
+#nav-2Back {
+    background-color: #4c4947;
+}
+
+#nav-1 {
+    background-color: #222022;
+}
+
+#logoTopLeft {
+    color: #53a451;
+}
+
+#nav_register_user {
+    color: #53a451;
+}
+
+#nav_returning_user {
+    color: #53a451;
+}
+#categories{
+    color: #efedef;
+}
+#categories:hover{
+    color: #53a451;
+}
+
+#categories:active{
+    color: #53a451;
+}
+
+#classifieds{
+    color: #efedef;
+}
+#classifieds:hover{
+    color: #53a451;
+}
+
+#classifieds:active{
+    color: #53a451;
+}
+
+#contactUs{
+    color: #efedef;
+}
+
+#contactUs:hover{
+    color: #53a451;
+}
+
+#contactUs:active{
+    color: #53a451;
+}
+
+#profile{
+    color: #efedef;
+}
+
+#profile:hover{
+    color: #53a451;
+}
+
+#profile:active{
+    color: #53a451;
+}
+
+#listAll {
+    color: #efedef;
+}
+#listAll:hover {
+    color: #53a451;
+}
+
+#listAll:active {
+    color: #53a451;
+}
+
+/*all the categories images*/
+.fa {
+    color: #53a451;
+}
+
+.far {
+    color: #53a451;
+}
+
+.fas{
+    color: #53a451;
+}
+
+.categoriesText{
+    color: #53a451;
+}
+
+#pleaseLogIn{
+    color: #53a451;
+}
+
+#logInButton{
+    background-color: #53a451;
+}
+
+#jar{
+    color: #53a451;
+}
+
+#adTitle{
+    color: #efedef;
+}
+
+#adTitle:hover{
+    color: #53a451;
+}
+
+#adTitle:link{
+    color: #53a451;
+}
+
+.row {
+    background-color: #4c4947;
+}
+
+#home-category{
+    background-color: #222022;
+}
+.home-header{
+    color: #53a451;
+    background-color: #222022;
+}
+
+#searchButton{
+    background-color: transparent;
+    color: #53a451;
+}
+
+#searchButton:hover{
+    background-color: #53a451;
+    color: #222022;
+}
+
+#individualAdTitle{
+    color: #53a451;
+}
+
+.adLabel{
+    color: #53a451;
+}

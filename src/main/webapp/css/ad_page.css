@@ -1,6 +1,8 @@
 .price {
-    border: 3px solid red;
-    color: red;
+    border: 3px solid white;
+    background-color: #53a451;
+    color: white;
+    text-align: center;
     width: 6em;
 }
 
@@ -13,12 +15,13 @@
     font-weight: bold;
 }
 .contactButton{
-    background-color: white;
-    color: red;
-    border: 2px solid red;
+    background-color: #53a451;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
 }
 .contactButton:hover{
-    background-color: red;
+    background-color: #53a451;
     color: white;
-    border: 2px solid red;
+    border: 2px solid #53a451;
 }
