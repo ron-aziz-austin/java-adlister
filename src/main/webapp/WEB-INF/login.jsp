@@ -12,13 +12,13 @@
         <h2 style="text-align: center;color: red">
             <c:out value="${invalidLogin}" />
         </h2>
-        <h1 id="pleaseLogIn">Please Log In</h1>
+        <h3 class="f-color-g">Please Log In</h3>
         <form action="/login" method="POST">
-            <div class="form-group">
+            <div class="f-color form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text" required>
             </div>
-            <div class="form-group">
+            <div class="f-color form-group">
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password" required>
             </div>
