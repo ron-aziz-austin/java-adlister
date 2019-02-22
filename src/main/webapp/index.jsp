@@ -62,8 +62,8 @@
                             <hr class="my-4">
 
                             <div class="pt-2">
-                                <button id="new_user" type="button" class="btn btn-outline-primary waves-effect">New User <span class="far fa-user ml-1"></span></button>
-                                <button id="returning_user" type="button" class="btn btn-outline-primary waves-effect">Returning User <i class="fas fa-user ml-1"></i></button>
+                                <button id="new_user" type="button" class="btn btn-success waves-effect">New User <span class="far fa-user ml-1"></span></button>
+                                <button id="returning_user" type="button" class="btn btn-success waves-effect">Returning User <i class="fas fa-user ml-1"></i></button>
                             </div>
                         </div>
                     </div>

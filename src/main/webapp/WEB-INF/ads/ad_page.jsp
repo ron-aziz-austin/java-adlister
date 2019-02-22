@@ -12,8 +12,8 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <%--TODO fix this--%>
     <div class="container">
-        <h4 id="individualAdTitle"><c:out value="${ad.title}"/></h4>
-            <p class="bottom_line">
+        <h4 class="f-color-g"><c:out value="${ad.title}"/></h4>
+            <p class="bottom_line f-color">
                 <span>Ad ID:&nbsp;</span>
                 <span><c:out value="${ad.id}"/></span>
             </p>
@@ -44,12 +44,12 @@
                     <label class="adLabel">Listed On: <c:out value="${ad.listedOn}"/></label>
                     <span>Feb 1</span>
                 </p>
-                <button class="contactButton">Contact Seller</button>
+                <button class="btn btn-success">Contact Seller</button>
             </div>
         </div>
         <div class="mt-2">
-            <h3>Description</h3>
-            <p><c:out value="${ad.description}"/></p>
+            <h3 class="f-color">Description</h3>
+            <p class="f-color"><c:out value="${ad.description}"/></p>
         </div>
     </div>
     <c:forEach var="ad" items="${ads}">

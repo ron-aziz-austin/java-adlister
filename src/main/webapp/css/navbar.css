@@ -8,7 +8,6 @@
 #nav-2 {
     height: 40px;
     margin-bottom: 80px;
-    background-color: #222022;
 }
 
 #nav-2 ul {
@@ -27,7 +26,7 @@
 }
 
 .navbar-sec {
-    background: #FAF8F8;
+    background-color: #4c4947;
     border-radius: 0;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     position: relative;
@@ -37,4 +36,12 @@
     margin: 0 auto;
     font-size: 1.2em;
     width: 100%;
+}
+
+.nav-link-color {
+    color: #efedef;
+}
+
+.nav-link-color:hover {
+    color: #53a451;
 }

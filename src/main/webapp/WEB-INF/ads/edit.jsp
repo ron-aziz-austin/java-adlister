@@ -9,9 +9,9 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-    <h1>Edit your ad</h1>
+    <h3 class="f-color-g main-header">Edit your ad</h3>
     <form action="/ads/edit?adId=${adId}" method="post">
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="category">Category</label>
             <select class="form-control" id="category" name="category">
                 <option value="15">Kids & Baby Products: Kids Clothes & Footwear</option>
@@ -28,31 +28,31 @@
                 <option value="26">Vehicles: Electric Bicycles</option>
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="title">Title</label>
             <input id="title" name="title" class="form-control" type="text" value="<c:out value="${ad.title}" />" required>
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" required></textarea>
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="country">Country</label>
             <input id="country" name="country" class="form-control" type="text">
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="location">Location</label>
             <input id="location" name="location" class="form-control" type="text">
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="city">City</label>
             <input id="city" name="city" class="form-control" type="text">
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="zip_code">Zip Code</label>
             <input id="zip_code" name="zip_code" class="form-control"  type="text" pattern="[0-9]{5}">
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="price_type">Price Type</label>
             <select class="form-control" id="price_type" name="price_type">
                 <option value="1">Fixed Price</option>
@@ -61,11 +61,11 @@
                 <option value="4">Free</option>
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group f-color">
             <label for="price">Price</label>
             <input id="price" name="price" class="form-control" type="number" min="0.00" max="10000.00" step="0.01" />
         </div>
-        <input type="submit" class="btn btn-block btn-primary">
+        <input type="submit" class="btn btn-block btn-success mt-4">
     </form>
 </div>
 <jsp:include page="/WEB-INF/partials/footer.jsp" />

@@ -9,13 +9,13 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-    <div class="container-fluid">
-        <h2>Browse Categories</h2>
-        <section class="category_list_wrap row">
+    <div id="classifieds" class="container">
+        <h3 class="f-color-g main-header">Browse Categories</h3>
+        <div class="bg-color-dark category_list_wrap row justify-content-md-center">
             <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
-                <div class="card-header"><h3>
-                    <a href="#" title="Animals">Animals</a>
-                </h3></div>
+                <div class="card-header">
+                    <h3><a href="#" title="Animals">Animals</a></h3>
+                </div>
 
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item py-0"><a href="#" >Cats</a>
@@ -27,6 +27,9 @@
                     </li>
                     <li class="list-group-item py-0"><a href="#">Abstract</a>
                     </li>
+                    <li class="list-group-item py-0">
+                        <a href="#">View all »</a>
+                    </li>
                 </ul>
             </div>
             <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
@@ -36,20 +39,23 @@
                 </div>
 
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item py-0"><a href="#" >Fashion &amp; Beauty</a>
-                    <li class="list-group-item py-0"><a href="#">Accessories</a>
+                    <li class="list-group-item py-0">
+                        <a href="#" >Fashion &amp; Beauty</a>
+                    <li class="list-group-item py-0">
+                        <a href="#">Accessories</a>
                     </li>
-                    <li class="list-group-item py-0"><a href="#">Cloths</a>
+                    <li class="list-group-item py-0">
+                        <a href="#">Cloths</a>
                     </li>
-                    <li class="list-group-item py-0"><a href="#">Footwear</a>
+                    <li class="list-group-item py-0">
+                        <a href="#">Footwear</a>
                     </li>
-                    <li class="list-group-item py-0"><a href="#">Abstract</a>
+                    <li class="list-group-item py-0">
+                        <a href="#">Abstract</a>
                     </li>
-                </ul>
-                </li>
-                <li class="view">
-                    <a href="#">View all »</a>
-                </li>
+                    <li class="list-group-item py-0">
+                        <a href="#">View all »</a>
+                    </li>
                 </ul>
             </div>
             <div class="card mx-3 my-3" style="width: 18rem; height: 18rem">
@@ -222,7 +228,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
     </div>
 
     <jsp:include page="/WEB-INF/partials/footer.jsp" />

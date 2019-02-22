@@ -44,7 +44,7 @@
                     <option value="26">Electric Bicycles</option>
                 </select>
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" id="searchButton" type="submit">Search</button>
+                    <button class="btn btn-success" type="submit">Search</button>
                 </div>
             </div>
         </form>
@@ -71,13 +71,13 @@
                     </div>
                     <%--Ad Copy--%>
                     <div class="ad-copy col-8">
-                        <a href="/adIndex?adId=${ad.id}"><h5 id="adTitle"><c:out value="${ad.title}" /></h5></a>
+                        <a href="/adIndex?adId=${ad.id}"><h5 id="adTitle" class="mt-2"><c:out value="${ad.title}" /></h5></a>
                         <p><c:out value="${categories[ii-1].title}"/> > <c:out value="${categories[i-1].title}"/> | By <c:out value="${username}"/></p>
                         <p><span>Location:</span> <c:out value="${ad.location}"/> <c:out value="${ad.city} "/>, TX,  <c:out value="${ad.zipCode}"/></p>
                         <p><span class="pr-4">Phone: <c:out value="${phone}"/></span>   <span>Email: <c:out value="${email}"/></span></p>
                     </div>
                     <div class="col-1">
-                        <p>$${ad.price}</p>
+                        <p class="mt-2">$${ad.price}</p>
                     </div>
                 </article>
             </div>

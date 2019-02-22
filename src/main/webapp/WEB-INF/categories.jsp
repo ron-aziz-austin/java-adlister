@@ -10,7 +10,7 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h3 class="home-header">Main Categories</h3>
+        <h3 class="main-header f-color-g">Main Categories</h3>
     </div>
     <div class="container">
         <ul id="home-category" class="row justify-content-md-center">

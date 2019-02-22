@@ -3,102 +3,29 @@ body{
     color: #222022;
     font-weight: 600;
 }
-
-#nav-2Back {
-    background-color: #4c4947;
+.main-header {
+    padding-bottom: 10px;
+    text-align: left;
 }
-
-#nav-1 {
-    background-color: #222022;
-}
-
-#logoTopLeft {
+.navbar-brand {
     color: #53a451;
+    font-size: 1.3em;
 }
-
-#nav_register_user {
-    color: #53a451;
-}
-
-#nav_returning_user {
-    color: #53a451;
-}
-#categories{
+.navbar-brand:hover {
     color: #efedef;
+    font-size: 1.3em;
 }
-#categories:hover{
-    color: #53a451;
-}
-
-#categories:active{
-    color: #53a451;
-}
-
-#classifieds{
-    color: #efedef;
-}
-#classifieds:hover{
-    color: #53a451;
-}
-
-#classifieds:active{
-    color: #53a451;
-}
-
-#contactUs{
-    color: #efedef;
-}
-
-#contactUs:hover{
-    color: #53a451;
-}
-
-#contactUs:active{
-    color: #53a451;
-}
-
-#profile{
-    color: #efedef;
-}
-
-#profile:hover{
-    color: #53a451;
-}
-
-#profile:active{
-    color: #53a451;
-}
-
-#listAll {
-    color: #efedef;
-}
-#listAll:hover {
-    color: #53a451;
-}
-
-#listAll:active {
-    color: #53a451;
-}
-
-/*all the categories images*/
-.fa {
-    color: #53a451;
-}
-
-.far {
-    color: #53a451;
-}
-
-.fas{
-    color: #53a451;
-}
-
 .categoriesText{
     color: #53a451;
 }
-
-#logInButton{
-    background-color: #53a451;
+.categoriesText:hover{
+    color: #222022;
+}
+#classifieds a {
+    color: #53a451;
+}
+#classifieds a:hover {
+    color: #222022;
 }
 
 #jar{
@@ -110,7 +37,7 @@ body{
 }
 
 #adTitle:hover{
-    color: #53a451;
+    color: #222022;
 }
 
 #adTitle:link{
@@ -129,26 +56,30 @@ body{
     background-color: #222022;
 }
 
-#searchButton{
-    background-color: transparent;
-    color: #53a451;
-}
-
-#searchButton:hover{
-    background-color: #53a451;
-    color: #222022;
-}
-
-#individualAdTitle{
-    color: #53a451;
-}
-
 .adLabel{
     color: #53a451;
+}
+.bg-color-dark {
+    background-color: #222022;
 }
 .f-color-g {
     color: #53a451;
 }
 .f-color {
     color: #efedef;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }

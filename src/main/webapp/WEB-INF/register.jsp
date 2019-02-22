@@ -12,7 +12,9 @@
         <h2 style="color:red;text-align:center">
             <c:out value="${inputErrors}" />
         </h2>
-        <h3 class="f-color-g">Register as a new User</h3>
+        <h3 class="f-color-g main-header">User Registration Form</h3>
+    </div>
+    <div class="container">
         <form action="/register" method="post">
             <%--first name--%>
             <div class="f-color form-group">
@@ -49,7 +51,6 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password" required>
             </div>
-
                 <%--fb--%>
                 <%--<div class="form-group">--%>
                     <%--<label for="user_fb">Facebook profile (optional)</label>--%>
@@ -66,8 +67,8 @@
                     <%--<input id="user_linkedin" name="user_linkedin" class="form-control" type="text" required>--%>
                 <%--</div>--%>
 
-                <%--submit button--%>
-            <input type="submit" class="btn btn-block btn-primary" value="Register">
+            <%--submit button--%>
+            <input type="submit" class="btn btn-block btn-success mt-4" value="Register">
         </form>
     </div>
     <jsp:include page="/WEB-INF/partials/footer.jsp" />

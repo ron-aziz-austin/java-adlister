@@ -15,14 +15,13 @@
                 <c:out value="${sessionScope.user.username}"/>
             </h1>
             <hr>
-            <div class="row">
+            <div class="bg-color-dark row">
                 <!-- left column -->
                 <div class="col-md-3">
                     <div class="text-center">
                         <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-                        <h6>Upload a different photo...</h6>
-
-                        <input type="file" class="form-control btn btn-default">
+                        <h6 class="f-color">Upload a different photo...</h6>
+                        <input type="file" class="form-control btn btn-success">
                     </div>
                 </div>
 
@@ -38,16 +37,16 @@
                     <%--<h2 style="color:red;text-align:center">--%>
                         <%--<c:out value="${inputErrors}" />--%>
                     <%--</h2>--%>
-                    <h3>Personal info</h3>
+                    <h3 class="f-color">Personal info</h3>
 
                     <form action="/profile/edit" method="post" class="form-horizontal" role="form">
-                        <div class="form-group">
+                        <div class="form-group f-color">
                             <label for="first_name_edit" class="col-lg-3 control-label">First name:</label>
                             <div class="col-lg-8">
                                 <input name="first_name_edit" id="first_name_edit" class="form-control" type="text" value= "<c:out value="${sessionScope.user.first_name}"/>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group f-color">
                             <label for="last_name_edit" class="col-lg-3 control-label">Last name:</label>
                             <div class="col-lg-8">
                                 <input name="last_name_edit" id="last_name_edit" class="form-control" type="text" value=" <c:out value="${sessionScope.user.last_name}"/>">
@@ -59,7 +58,7 @@
                                 <%--<input id="company" class="form-control" type="text" value="">--%>
                             <%--</div>--%>
                         <%--</div>--%>
-                        <div class="form-group">
+                        <div class="form-group f-color">
                             <label for="email_edit" class="col-lg-3 control-label">Email:</label>
                             <div class="col-lg-8">
                                 <input name="email_edit" id="email_edit" class="form-control" type="text" value=<c:out value="${sessionScope.user.email}"/>>
@@ -71,24 +70,24 @@
                                 <%--<input id="username_edit" class="form-control" type="text" value="Username">--%>
                             <%--</div>--%>
                         <%--</div>--%>
-                        <div class="form-group">
+                        <div class="form-group f-color">
                             <label for="password_edit" class="col-md-3 control-label">Password:</label>
                             <div class="col-md-8">
                                 <input name="password_edit" id="password_edit" class="form-control" type="password" >
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group f-color">
                             <label for="confirm_password_edit" class="col-md-3 control-label">Confirm password:</label>
                             <div class="col-md-8">
                                 <input name="confirm_password_edit" id="confirm_password_edit" class="form-control" type="password" >
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group f-color">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <input type="submit" name="submit" class="btn btn-primary" value="submit">
+                                <input type="submit" name="submit" class="btn btn-success" value="submit">
                                 <span></span>
-                                <input type="reset" class="btn btn-default" onclick="cancelEditProfile()" value="Cancel">
+                                <input type="reset" class="btn btn-success" onclick="location.href='/profile'" value="Cancel">
                             </div>
                         </div>
                     </form>
@@ -96,11 +95,6 @@
             </div>
         </div>
         <hr>
-        <script>
-            function cancelEditProfile() {
-                location.href = "http://localhost:8080/profile";
-            }
-        </script>
         <jsp:include page="/WEB-INF/partials/footer.jsp" />
         <jsp:include page="/WEB-INF/partials/jsScripts.jsp"/>
     </body>
