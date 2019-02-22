@@ -10,7 +10,6 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <%--TODO fix this--%>
     <div class="container">
         <h4 class="f-color-g"><c:out value="${ad.title}"/></h4>
             <p class="bottom_line f-color">
@@ -21,29 +20,28 @@
             <h5 class="my-auto">$<c:out value="${ad.price}"/></h5>
         </div>
         <div class="row">
-            <div class="column">
+            <div class="col-lg-4 col-md-6 col-sm-12 p-0">
                 <div id = "main_image">
-                    <%--TODO added temporary inline style--%>
-                    <img style="width: 300px;height: auto" src="${ad.image}">
+                    <img src="${ad.image}">
                 </div>
             </div>
-            <div class="column ml-2">
-                <p class="entry_address">
-                    <label class="adLabel">Location: </label>
-                    <span id="frontend_address" class="frontend_address"><c:out value="${ad.location}"/></span>
-                </p>
-                <p class="classified_city">
-                    <label class="adLabel">City: <c:out value="${ad.city}"/></label>
-                    <span><c:out value="${ad.city}"/></span>
-                </p>
-                <p class="zip_code">
-                    <label class="adLabel">Zip Code: </label>
-                    <span class="frontend_zip_code"><c:out value="${ad.zipCode}"/></span>
-                </p>
-                <p class="publish_date">
-                    <label class="adLabel">Listed On: <c:out value="${ad.listedOn}"/></label>
-                    <span>Feb 1</span>
-                </p>
+            <div class="col-lg-4 col-md-3 col-sm-6 align-self-center p-0">
+                <p class="entry_address"><c:out value="${ad.location}"/></p>
+                <p class="classified_city"><c:out value="${ad.city}"/></p>
+                <p class="zip_code"><c:out value="${ad.zipCode}"/></p>
+                <p class="publish_date">Listed On: <c:out value="${ad.listedOn}"/></p>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-6 align-self-center p-0">
+                <c:forEach var="user" items="${usersPublicInfo}">
+                    <c:if test = "${user != null && user.id == ad.userId}">
+                        <c:set var="username" value="${user.username}"/>
+                        <c:set var="phone" value="${user.phone_number}"/>
+                        <c:set var="email" value="${user.email}"/>
+                    </c:if>
+                </c:forEach>
+                <p>Seller: <c:out value="${username}" /></p>
+                <p>Phone: <c:out value="${phone}" /></p>
+                <p>Email: <c:out value="${email}" /></p>
                 <button class="btn btn-success">Contact Seller</button>
             </div>
         </div>

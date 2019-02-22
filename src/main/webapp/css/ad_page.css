@@ -6,8 +6,9 @@
     width: 6em;
 }
 
-#main_image{
-    margin-top: 1em;
+img {
+    width: 300px;
+    height: auto;
 }
 
 .adLabel {

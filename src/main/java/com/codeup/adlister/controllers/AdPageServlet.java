@@ -21,9 +21,8 @@ public class AdPageServlet extends HttpServlet {
         request.setAttribute("ad", ad);
         // send list of categories to html
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
-
-        // TODO create a classified_status interface, class, dao, etc ... possibly get rid of this column in the ads table
-        //request.setAttribute("status", staus);
+        // send user's public info to html
+        request.setAttribute("usersPublicInfo", DaoFactory.getUsersDao().usersPublicInfo());
 
         // send user to the individual ad page
         request.getRequestDispatcher("/WEB-INF/ads/ad_page.jsp").forward(request,response);
