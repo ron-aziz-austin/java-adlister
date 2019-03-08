@@ -1,1 +1,3 @@
+DROP DATABASE IF EXISTS adlister_db;
+
 CREATE DATABASE IF NOT EXISTS adlister_db;
