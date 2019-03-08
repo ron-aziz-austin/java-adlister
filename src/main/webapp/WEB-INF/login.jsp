@@ -9,9 +9,13 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h2 style="text-align: center;color: red">
-            <c:out value="${invalidLogin}" />
-        </h2>
+        <c:if test="${invalidLogin != null}">
+            <div class="alert alert-danger alert-dismissable">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <i class="fa fa-times-circle"></i>
+                <c:out value="${invalidLogin}" />
+            </div>
+        </c:if>
         <h3 class="f-color-g main-header">Please Log In</h3>
     </div>
     <div class="container">
