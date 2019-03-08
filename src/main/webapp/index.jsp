@@ -56,9 +56,9 @@
                 <div class="container text-center">
                     <div class="b-color row">
                         <div class="col-lg-12 p-3">
-                            <h2>Name TBD</h2>
+                            <h2>Classified Adlister</h2>
                             <p class="f-size card-text text-center">
-                                XXX adlister is the most popular adliter in the San Antonio area since it's creation in 2019. Thousands of users create and sell products every single day. Registering for an account is simple and straightforward. Join the thousands of users who already enjoy xxx adlister and start selling and buying today!</p>
+                                Classified Adlister is the most popular adliter in the San Antonio area since it's creation in 2019. Thousands of users create and sell products every single day. Registering for an account is simple and straightforward. Join the thousands of users who already enjoy Classified Adlister and start selling and buying today!</p>
                             <hr class="my-4">
 
                             <div class="pt-2">
